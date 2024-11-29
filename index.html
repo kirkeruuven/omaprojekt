@@ -137,5 +137,13 @@
     <footer>
       <p>Created by Kirke Ruuven. Inspired by Google's UI Design.</p>
     </footer>
+    window.addEventListener('load', () => {
+        // Check if the URL contains a fragment (e.g., #material-design)
+        if (window.location.hash) {
+            // Remove the fragment from the URL without refreshing the page
+            history.replaceState(null, null, window.location.pathname);
+        }
+    });
+    
   </body>
 </html>

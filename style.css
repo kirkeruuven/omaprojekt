@@ -1,97 +1,107 @@
+/* Global Reset and Font Styling */
 body {
-    font-family: 'Roboto', sans-serif; /* Apply Roboto globally */
+    font-family: 'Roboto', sans-serif; /* Global font */
     font-size: 16px; /* Default font size */
     line-height: 1.5; /* Adjust line height for readability */
-    color: #333; /* Default text color */
-    margin: 0; /* Reset default browser margins */
-    padding: 0; /* Reset default browser padding */
+    color: #333; /* Text color */
+    margin: 0; /* Remove browser defaults */
+    padding: 0; /* Reset browser padding */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  h1, h2, h3 {
-    font-weight: 700; /* Bold for headings */
-  }
-  
-  p, li, a {
+h1, h2, h3 {
+    font-weight: 700; /* Bold headings */
+}
+
+p, li, a {
     font-weight: 400; /* Regular weight for body text */
-  }
-  
-  small {
-    font-weight: 300; /* Light weight for small text */
-  }
+}
 
+small {
+    font-weight: 300; /* Light weight for small text */
+}
+
+/* --- Full-Width Sections with Padding --- */
+section, header, footer, main {
+    padding: 0 40px; /* Adds comfortable padding from screen edges */
+}
+
+@media (max-width: 768px) {
+    section, header, footer, main {
+        padding: 0 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* --- Navbar --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 40px; /* Navbar-specific padding */
     background-color: #f8f9fa;
     border-bottom: 2px solid #ddd;
     position: sticky;
     top: 0;
     z-index: 1000;
-  }
-  
-  .navbar-logo img {
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+.navbar-logo img {
     height: 40px;
     width: auto;
-  }
-  
-  .navbar-menu {
+}
+
+.navbar-menu {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Space between items */
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .navbar-menu li {
-    font-size: 16px;
-  }
-  
-  .navbar-menu a {
+}
+
+.navbar-menu a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-menu a:hover {
-    color: #4285F4;
-  }
-  
-  .navbar-menu a.active {
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #4285F4; /* Google blue hover */
+}
+
+.navbar-menu a.active {
     color: #4285F4;
     border-bottom: 2px solid #4285F4;
     padding-bottom: 2px;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar-menu {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-    }
-  
-    .navbar {
-      padding: 10px;
-    }
-  }
-  
-  .hero {
+}
+
+/* --- Hero Section --- */
+.hero {
     position: relative;
-    height: 80vh;
-    background-image: url(assets/1.webp);
+    height: 80vh; /* Fullscreen feel */
+    background-image: url(assets/2.png); /* Add your hero image */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
-    padding: 20px;
-    overflow: hidden; /* Ensure no content overflows */
+    color: white;
+    padding: 40px 40px;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 20px; /* Adjust padding for smaller screens */
+    }
 }
 
 .overlay {
@@ -100,135 +110,132 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity */
-    z-index: 1; /* Ensure it layers above the background */
+    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay for contrast */
+    z-index: 1; /* Keep below content */
 }
 
 .hero-content {
-    position: relative; /* Keeps content above the overlay */
+    position: relative; /* Keeps content above overlay */
     z-index: 2;
 }
 
-.hero h1{
+.hero h1 {
     font-size: 4rem;
-}  
-
-.material-description {
-    background-color: #f8f9fa; /* Light background for contrast */
-    padding: 40px 20px; /* Add space around the content */
-    text-align: center; /* Center-align text */
-  }
-  
-  .material-description .content {
-    max-width: 800px; /* Limit content width for readability */
-    margin: 0 auto; /* Center the content */
-  }
-  
-  .material-description h2 {
-    font-size: 2rem; /* Headline size */
-    color: #333; /* Dark text for contrast */
-    margin-bottom: 20px; /* Space below the heading */
-  }
-  
-  .material-description p {
-    font-size: 1.2rem; /* Slightly larger paragraph text */
-    color: #555; /* Softer text color */
-    line-height: 1.6; /* Improve readability */
-  }
-  
-.principle-section {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    gap: 30px; /* Add space between each principle */
-    padding: 20px;
-  }
-
-  .principle-section h2 {
-    font-size: 2rem; /* Larger title */
-    margin-bottom: 20px; /* Space under the title */
+    margin: 0 0 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Adds shadow */
 }
-  
-  .principle-item {
-    display: flex;
-    align-items: center; /* Vertically center image and text */
-    gap: 20px; /* Space between image and text */
-  }
-  
-  .principle-image {
-    width: 150px; /* Adjust size as needed */
-    height: auto; /* Keep image aspect ratio */
-  }
-  
-  .image-left {
-    order: 0; /* Default order */
-  }
-  
-  .image-right {
-    order: 1; /* Swap order for text and image */
-  }
-  
-  .principle-text {
-    flex: 1; /* Let text take up remaining space */
-  }
-  
 
+.hero p {
+    font-size: 1.2rem;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Adds shadow */
+}
+
+/* Hero Content Animation */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Animation applied */
+}
+
+/* Keyframes for Fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to normal position */
+    }
+}
+
+/* --- Material Description --- */
+.material-description {
+    background-color: #f8f9fa; /* Light background */
+    padding: 40px 40px; /* Ensure padding matches layout */
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .material-description {
+        padding: 40px 20px; /* Adjust for smaller devices */
+    }
+}
+
+.material-description .content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.material-description h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.material-description p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- Products Section --- */
 .products-section {
-    padding: 40px 20px; /* Add space around the section */
-    background-color: #f8f9fa; /* Light background for contrast */
-    text-align: center; /* Center-align the title */
-  }
-  
-  .products-section h2 {
-    font-size: 2.5rem; /* Larger title */
-    margin-bottom: 20px; /* Space under the title */
-  }
-  
-  .product-grid {
-    display: flex; /* Use Flexbox to create a grid */
-    flex-wrap: wrap; /* Allow items to wrap if the screen is small */
-    justify-content: center; /* Center the grid items */
-    gap: 20px; /* Space between cards */
-  }
-  
-  .product-card {
-    background-color: white; /* Card background */
-    border: 1px solid #ddd; /* Light border for structure */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    width: 300px; /* Fixed width for cards */
-    padding: 20px; /* Space inside the card */
-    text-align: left; /* Align text to the left */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-  }
-  
-  .product-card:hover {
-    transform: translateY(-5px); /* Lift the card slightly */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow */
-  }
-  
-  .product-image {
-    width: 100px; /* Adjust image size */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 15px; /* Space below the image */
-  }
-  
-  .product-card h3 {
-    font-size: 1.5rem; /* Product name size */
-    margin-bottom: 10px; /* Space below the title */
-  }
-  
-  .product-card p {
-    font-size: 1rem; /* Description size */
-    line-height: 1.5; /* Line spacing for readability */
-    color: #555; /* Softer text color */
-  }
-  
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2.5rem; /* Reduce font size for headings */
+    padding: 40px 40px; /* Keep padding consistent */
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .products-section {
+        padding: 40px 20px;
     }
-    .hero {
-      height: auto; /* Allow content to dictate height */
-      padding: 40px 20px; /* Adjust padding for better spacing */
-    }
-  }
+}
+
+.products-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards for smaller screens */
+    justify-content: center; /* Center align */
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger hover shadow */
+}
+
+.product-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}

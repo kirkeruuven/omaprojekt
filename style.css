@@ -131,6 +131,30 @@ section, header, footer, main {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Adds shadow */
 }
 
+.hero-button {
+    display: inline-block;
+    background-color: #4285F4; /* Google Blue */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px; /* Add spacing from the paragraph */
+}
+
+.hero-button:hover {
+    background-color: #3367D6; /* Darker Blue on Hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.hero-button:active {
+    transform: translateY(0); /* Button returns when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adjust shadow on click */
+}
+
 /* Hero Content Animation */
 .hero-content {
     position: relative;

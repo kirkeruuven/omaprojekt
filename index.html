@@ -5,91 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Material Design</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="navbar">
-      <!-- Google logo -->
-      <a href="#hero" class="navbar-logo">
-        <img src="assets/1.png" alt="Google Logo" />
-      </a>      
-      <!-- Menu items -->
-      <ul class="navbar-menu">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#principles">Principles</a></li>
-        <li><a href="#products">Components</a></li>
-        <li><a href="#evolution">Examples</a></li>
-        <li><a href="#design-culture">Resources</a></li>
-      </ul>
-    </div>
-    <!-- Hero Section -->
+
+    <!-- Full-width Navbar -->
+    <header class="navbar">
+      <div class="wrapper">
+        <a href="#hero" class="navbar-logo">
+          <img src="assets/1.png" alt="Google Logo" />
+        </a>
+        <ul class="navbar-menu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#examples">Examples</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Full-width Hero Section -->
     <section id="hero" class="hero">
       <div class="overlay"></div>
       <div class="hero-content">
-        <h1>Material Design: Inspiring the World of UX/UI.</h1>
-        <p>Get an overview, resources, and examples to help you implement Google's design language.</p>
+        <h1>Material Design: Inspiring the World of UX/UI</h1>
+        <p>
+          Get an overview, resources, and examples to help you implement
+          Google's design language.
+        </p>
       </div>
     </section>
 
-    <section class="material-description" id="material-design">
-      <div class="content">
+    <!-- Centered Content Section -->
+    <section class="material-description">
+      <div class="wrapper">
         <h2>What is Material Design?</h2>
         <p>
-          Material Design is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material Design streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.
+          Material Design is a design system built and supported by Google designers and developers. Material.io includes in-depth UX guidance and UI component implementations for Android, Flutter, and the Web. 
         </p>
       </div>
     </section>
 
     <!-- Principles Section -->
     <section id="principles" class="principle-section">
-      <h2>Design Principles - Google Material Design</h2>
-      <div class="principle-item">
-        <img src="image1.jpg" alt="Principle Image" class="principle-image image-left" />
-        <div class="principle-text">
-          <h3>1. Material is the Metaphor</h3>
-          <p>This principle is based on real-world physics. Material Design creates a digital environment that feels tangible and familiar by mimicking the behavior of physical objects like paper.</p>
+      <div class="wrapper">
+        <h2>Design Principles - Google Material Design</h2>
+        <div class="principle-item image-left">
+          <img
+            src="assets/unnamed11.png"
+            alt="Principle Image"
+            class="principle-image"
+          />
+          <div class="principle-text">
+            <h3>1. Material is the Metaphor</h3>
+            <p>
+              This principle is based on real-world physics. Material Design
+              creates a digital environment that feels tangible and familiar by
+              mimicking the behavior of physical objects like paper.
+            </p>
+          </div>
+        </div>
+
+        <div class="principle-item image-right">
+          <img
+            src="assets/unnamed4.png"
+            alt="Principle Image"
+            class="principle-image"
+          />
+          <div class="principle-text">
+            <h3>2. Bold, Graphic, and Intentional</h3>
+            <p>
+              Material Design emphasizes clarity through bold use of colors,
+              typography, and white space.
+            </p>
+          </div>
+        </div>
+
+        <div class="principle-item image-left">
+          <img
+            src="assets/unnamed5.png"
+            alt="Principle Image"
+            class="principle-image"
+          />
+          <div class="principle-text">
+            <h3>3. Motion Provides Meaning</h3>
+            <p>
+              Motion is used to guide users through the interface. Transitions
+              are smooth, intentional, and focus on user actions.
+            </p>
+          </div>
+        </div>
+
+        <div class="principle-item image-right">
+          <img
+            src="assets/unnamed7.png"
+            alt="Principle Image"
+            class="principle-image"
+          />
+          <div class="principle-text">
+            <h3>4. Adaptive Design for All Screens</h3>
+            <p>
+              Material Design is responsive and works seamlessly on various
+              screen sizes and devices.
+            </p>
+          </div>
+        </div>
+
+        <div class="principle-item image-left">
+          <img
+            src="assets/unnamed2.png"
+            alt="Principle Image"
+            class="principle-image"
+          />
+          <div class="principle-text">
+            <h3>5. Consistent Components</h3>
+            <p>
+              Material Design components (like buttons, cards, and sliders) are
+              standardized for consistency across apps and devices.
+            </p>
+          </div>
         </div>
       </div>
-
-      <div class="principle-item">
-        <img src="image2.jpg" alt="Principle Image" class="principle-image image-right" />
-        <div class="principle-text">
-          <h3>2. Bold, Graphic, and Intentional</h3>
-          <p>Material Design emphasizes clarity through bold use of colors, typography, and white space.</p>
-        </div>
-      </div>
-
-      <div class="principle-item">
-        <img src="image3.jpg" alt="Principle Image" class="principle-image image-left" />
-        <div class="principle-text">
-          <h3>3. Motion Provides Meaning</h3>
-          <p>Motion is used to guide users through the interface. Transitions are smooth, intentional, and focus on user actions.</p>
-        </div>
-      </div>
-
-      <div class="principle-item"></div>
-        <img src="image3.jpg" alt="Principle Image" class="principle-image image-left" />
-        <div class="principle-text">
-          <h3>4. Adaptive Design for All Screens</h3>
-          <p>Material Design is responsive and works seamlessly on various screen sizes and devices.</p>
-        </div>
-      </div>
-
-      <div class="principle-item"></div>
-      <img src="image3.jpg" alt="Principle Image" class="principle-image image-left" />
-      <div class="principle-text">
-        <h3>5. Consistent Components</h3>
-        <p>Material Design components (like buttons, cards, and sliders) are standardized for consistency across apps and devices.</p>
-      </div>
-    </div>
-
     </section>
-    
 
+    <!-- Footer -->
     <footer>
-      <p>Created by Kirke Ruuven, a Junior UI/UX Designer inspired by Material Design.</p>
-      <p>© 2024 All Rights Reserved.</p>
+      <div class="wrapper">
+        <p>
+          Created by Kirke Ruuven, a Junior UI/UX Designer inspired by Material
+          Design.
+        </p>
+        <p>© 2024 All Rights Reserved.</p>
+      </div>
     </footer>
-
   </body>
 </html>

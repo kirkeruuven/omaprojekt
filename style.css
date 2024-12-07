@@ -1,44 +1,49 @@
-/* Global Reset and Font Styling */
+/* --- Global Reset and Font Styling --- */
 body {
-    font-family: 'Roboto', sans-serif; /* Global font */
-    font-size: 16px; /* Default font size */
-    line-height: 1.5; /* Adjust line height for readability */
-    color: #333; /* Text color */
-    margin: 0; /* Remove browser defaults */
-    padding: 0; /* Reset browser padding */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3 {
-    font-weight: 700; /* Bold headings */
+    font-weight: 700;
+    margin: 0 0 15px;
 }
 
 p, li, a {
-    font-weight: 400; /* Regular weight for body text */
+    font-weight: 400;
+    margin: 0 0 10px;
 }
 
 small {
-    font-weight: 300; /* Light weight for small text */
+    font-weight: 300;
 }
 
-/* --- Full-Width Sections with Padding --- */
-section, header, footer, main {
-    padding: 0 40px; /* Adds comfortable padding from screen edges */
+/* --- Wrapper Styling --- */
+.wrapper {
+    max-width: 1240px; /* Limit the content width */
+    margin: 0 auto; /* Center the wrapper */
+    padding: 0 40px; /* Add padding on the sides */
+    box-sizing: border-box; /* Include padding in the box model */
 }
 
 @media (max-width: 768px) {
-    section, header, footer, main {
-        padding: 0 20px; /* Reduce padding for smaller screens */
+    .wrapper {
+        padding: 0 20px; /* Adjust padding for smaller screens */
     }
 }
 
-/* --- Navbar --- */
+/* --- Navbar Styling --- */
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px; /* Navbar-specific padding */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Vertically center items */
+    padding: 10px 0;
     background-color: #f8f9fa;
     border-bottom: 2px solid #ddd;
     position: sticky;
@@ -46,34 +51,29 @@ section, header, footer, main {
     z-index: 1000;
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        padding: 10px 20px; /* Adjust padding for smaller screens */
-    }
-}
-
 .navbar-logo img {
     height: 40px;
     width: auto;
+    display: block; /* Ensures proper alignment */
 }
 
 .navbar-menu {
-    display: flex;
-    gap: 20px; /* Space between items */
+    display: flex; /* Horizontal layout for menu items */
+    gap: 20px; /* Add space between items */
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .navbar-menu a {
-    text-decoration: none;
+    text-decoration: none; /* Remove underlines */
     color: #333;
     font-weight: bold;
     transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .navbar-menu a:hover {
-    color: #4285F4; /* Google blue hover */
+    color: #4285F4;
 }
 
 .navbar-menu a.active {
@@ -82,26 +82,27 @@ section, header, footer, main {
     padding-bottom: 2px;
 }
 
+/* --- Responsive Navbar --- */
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 10px; /* Smaller gap for mobile */
+    }
+}
+
 /* --- Hero Section --- */
 .hero {
     position: relative;
-    height: 80vh; /* Fullscreen feel */
-    background-image: url(assets/2.png); /* Add your hero image */
+    height: 80vh;
+    background-image: url('assets/2.png'); /* Update with your hero image */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: white;
-    padding: 40px 40px;
-    overflow: hidden; /* Prevent content overflow */
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding: 40px 20px; /* Adjust padding for smaller screens */
-    }
+    overflow: hidden;
+    text-align: center;
 }
 
 .overlay {
@@ -110,60 +111,44 @@ section, header, footer, main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
-    z-index: 1; /* Keep below content */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .hero-content {
-    position: relative; /* Keeps content above overlay */
-    z-index: 2;
+    position: relative;
+    z-index: 2; /* Keeps the content above the overlay */
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .hero h1 {
-    font-size: 4rem;
-    margin: 0 0 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Adds shadow */
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Adds subtle shadow */
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin: 0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Adds shadow */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-
-/* Hero Content Animation */
-.hero-content {
-    position: relative;
-    z-index: 2;
-    opacity: 0; /* Start invisible */
-    transform: translateY(20px); /* Start slightly below */
-    animation: fadeIn 1.5s ease-in-out forwards; /* Animation applied */
-}
-
-/* Keyframes for Fade-in */
 @keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(20px); /* Start below */
+        transform: translateY(20px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Move to normal position */
+        transform: translateY(0);
     }
 }
 
-/* --- Material Description --- */
+/* --- Material Description Section --- */
 .material-description {
-    background-color: #f8f9fa; /* Light background */
-    padding: 40px 40px; /* Ensure padding matches layout */
+    background-color: #f8f9fa;
+    padding: 60px 0;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .material-description {
-        padding: 40px 20px; /* Adjust for smaller devices */
-    }
 }
 
 .material-description .content {
@@ -173,79 +158,93 @@ section, header, footer, main {
 
 .material-description h2 {
     font-size: 2rem;
-    color: #333;
     margin-bottom: 20px;
 }
 
 .material-description p {
     font-size: 1.2rem;
     color: #555;
-    line-height: 1.6;
 }
 
-/* --- Products Section --- */
-.products-section {
-    padding: 40px 40px; /* Keep padding consistent */
-    background-color: #f8f9fa;
+/* --- Principles Section --- */
+.principle-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.principle-section h2 {
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .products-section {
-        padding: 40px 20px;
-    }
-}
-
-.products-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
-.product-grid {
+.principle-item {
     display: flex;
-    flex-wrap: wrap; /* Wrap cards for smaller screens */
-    justify-content: center; /* Center align */
+    align-items: center;
+    margin: 30px 0;
     gap: 20px;
 }
 
-.product-card {
-    background-color: white;
-    border: 1px solid #ddd;
+.principle-item.image-left {
+    flex-direction: row;
+}
+
+.principle-item.image-right {
+    flex-direction: row-reverse;
+}
+
+.principle-image {
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
-    width: 300px;
-    padding: 20px;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger hover shadow */
+.principle-text {
+    flex: 1;
 }
 
-.product-image {
-    width: 100px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.product-card h3 {
+.principle-text h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    color: #333;
 }
 
-.product-card p {
+.principle-text p {
     font-size: 1rem;
-    line-height: 1.5;
     color: #555;
+    line-height: 1.6;
 }
 
+/* --- Footer Section --- */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 20px 0;
     font-size: 0.9rem;
-  }
-  
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .principle-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .principle-item.image-right {
+        flex-direction: column;
+    }
+
+    .principle-image {
+        margin-bottom: 15px;
+    }
+}

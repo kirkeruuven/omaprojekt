@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* --- Global Reset and Font Styling --- */
 body {
     font-family: 'Roboto', sans-serif;
@@ -24,6 +28,35 @@ small {
     font-weight: 300;
 }
 
+button {
+    all: unset; /* Reset all styles */
+    box-sizing: border-box; /* Include padding/border in size */
+}
+
+.material-button {
+    display: inline-flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
+    font-family: 'Roboto', sans-serif; /* Material Design font */
+    font-size: 1.1rem; /* Font size */
+    font-weight: 500; /* Semi-bold for Material style */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    background-color: #6F3FF5; /* Original Vibrant Purple */
+    border: none; /* Remove border */
+    border-radius: 40px; /* Fully rounded corners */
+    height: 56px; /* Material Design suggested button height */
+    padding: 0 32px; /* Horizontal padding for text spacing */
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 60px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Elevated shadow */
+    transition: background-color 0.2s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.material-button:hover {
+    background-color: #7135fc; /* Slightly lighter purple */
+}
+
 /* --- Wrapper Styling --- */
 .wrapper {
     max-width: 1240px; /* Limit the content width */
@@ -44,8 +77,7 @@ small {
     justify-content: space-between; /* Space between logo and menu */
     align-items: center; /* Vertically center items */
     padding: 10px 0;
-    background-color: #f8f9fa;
-    border-bottom: 2px solid #ddd;
+    background-color: #F9F5F2;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -123,9 +155,8 @@ small {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Adds subtle shadow */
 }
 
 .hero p {
@@ -216,10 +247,18 @@ small {
     line-height: 1.6;
 }
 
+.text-container {
+    background-color: #F9F5F2; /* Light beige */
+    border-radius: 12px; /* Rounded corners */
+    padding: 40px; /* Padding inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    margin-bottom: 40px; /* Spacing below the container */
+}
+
 /* --- Footer Section --- */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #F9F5F2;
+    color: #333333;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9rem;

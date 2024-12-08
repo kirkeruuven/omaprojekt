@@ -70,37 +70,52 @@ button {
         padding: 0 20px; /* Adjust padding for smaller screens */
     }
 }
-
 /* --- Navbar Styling --- */
 .navbar {
-    display: flex;
-    justify-content: space-between; /* Space between logo and menu */
-    align-items: center; /* Vertically center items */
-    padding: 10px 0;
     background-color: #F9F5F2;
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%; /* Full-width navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Wrapper ensures alignment with sections */
+.navbar .wrapper {
+    max-width: 1240px;
+    margin: 0 auto; /* Centers the navbar content */
+    display: flex;
+    justify-content: space-between; /* Aligns logo and menu */
+    align-items: center; /* Vertically centers items */
+    padding: 15px 40px; /* Adds consistent padding */
+    box-sizing: border-box;
+}
+
+/* Logo Styling */
 .navbar-logo img {
-    height: 40px;
+    height: 80px;
     width: auto;
-    display: block; /* Ensures proper alignment */
+    display: block;
 }
 
+/* Navbar Menu Styling */
 .navbar-menu {
     display: flex; /* Horizontal layout for menu items */
-    gap: 20px; /* Add space between items */
+    gap: 30px; /* Space between items */
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+.navbar-menu li {
+    display: inline; /* Inline items */
+}
+
 .navbar-menu a {
-    text-decoration: none; /* Remove underlines */
+    text-decoration: none;
     color: #333;
     font-weight: bold;
+    font-size: 16px;
     transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
@@ -108,19 +123,19 @@ button {
     color: #4285F4;
 }
 
-.navbar-menu a.active {
-    color: #4285F4;
-    border-bottom: 2px solid #4285F4;
-    padding-bottom: 2px;
-}
-
-/* --- Responsive Navbar --- */
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
+    .navbar .wrapper {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align for smaller screens */
+    }
+
     .navbar-menu {
-        flex-direction: column; /* Stack menu items vertically */
-        gap: 10px; /* Smaller gap for mobile */
+        flex-direction: column; /* Stack menu items */
+        gap: 15px; /* Adjust spacing for mobile */
     }
 }
+
 
 /* --- Hero Section --- */
 .hero {

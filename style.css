@@ -56,7 +56,6 @@ button {
 .material-button:hover {
     background-color: #7135fc; /* Slightly lighter purple */
 }
-
 /* --- Wrapper Styling --- */
 .wrapper {
     max-width: 1240px; /* Limit the content width */
@@ -70,6 +69,7 @@ button {
         padding: 0 20px; /* Adjust padding for smaller screens */
     }
 }
+
 /* --- Navbar Styling --- */
 .navbar {
     background-color: #F9F5F2;
@@ -123,18 +123,46 @@ button {
     color: #4285F4;
 }
 
+/* --- Hamburger Menu Styling --- */
+.navbar-toggle {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    padding: 10px;
+}
+
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
     .navbar .wrapper {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center-align for smaller screens */
+        flex-direction: row; /* Keep logo and toggle button in a row */
+        justify-content: space-between;
     }
 
     .navbar-menu {
-        flex-direction: column; /* Stack menu items */
-        gap: 15px; /* Adjust spacing for mobile */
+        display: none; /* Hide menu by default */
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px;
+        background-color: #F9F5F2;
+        position: absolute;
+        top: 100%; /* Position menu below navbar */
+        right: 0;
+        left: 0;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .navbar-toggle {
+        display: block; /* Show hamburger menu button */
     }
 }
+
 
 
 /* --- Hero Section --- */
@@ -192,7 +220,7 @@ button {
 
 /* --- Material Description Section --- */
 .material-description {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     padding: 60px 0;
     text-align: center;
 }
@@ -209,7 +237,7 @@ button {
 
 .material-description p {
     font-size: 1.2rem;
-    color: #555;
+    color: #000000;
 }
 
 /* --- Principles Section --- */

@@ -12,21 +12,24 @@
   </head>
   <body>
 
-    <!-- Full-width Navbar -->
-<header class="navbar">
-  <div class="wrapper">
-    <a href="#hero" class="navbar-logo">
-      <img src="assets/1.png" alt="Google Logo" />
-    </a>
-    <ul class="navbar-menu">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#principles">Principles</a></li>
-      <li><a href="#components">Components</a></li>
-      <li><a href="#examples">Examples</a></li>
-      <li><a href="#resources">Resources</a></li>
-    </ul>
-  </div>
-</header>
+    <header class="navbar">
+      <div class="wrapper">
+        <a href="#hero" class="navbar-logo">
+          <img src="assets/1.png" alt="Google Logo" />
+        </a>
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          &#9776; <!-- Unicode for hamburger icon -->
+        </button>
+        <ul class="navbar-menu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#examples">Examples</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </div>
+    </header>
+    
 
 
     <!-- Full-width Hero Section -->
@@ -40,13 +43,13 @@
           Google's design language.
         </p>
         <!-- Button linked to the Principles section -->
-        <a href="#principles" class="material-button">Start Exploring</a>
+        <a href="#start" class="material-button">Start Exploring</a>
       </div>
     </div>
     </section>
 
     <!-- Centered Content Section -->
-    <section class="material-description">
+    <section id="start" class="material-description">
       <div class="wrapper">
         <h2>What is Material Design?</h2>
         <p>
@@ -150,5 +153,15 @@
       </div>
     </footer>
     
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleButton = document.querySelector(".navbar-toggle");
+        const menu = document.querySelector(".navbar-menu");
+    
+        toggleButton.addEventListener("click", () => {
+          menu.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>

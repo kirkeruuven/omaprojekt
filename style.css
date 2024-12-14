@@ -39,10 +39,10 @@ button {
     align-items: center; /* Vertically center the text */
     font-family: 'Roboto', sans-serif; /* Material Design font */
     font-size: 1.1rem; /* Font size */
-    font-weight: 500; /* Semi-bold for Material style */
-    color: white; /* Text color */
+    font-weight: 500; /* Semi-bold for Material style */ 
     text-decoration: none; /* Remove underline */
-    background-color: #6F3FF5; /* Original Vibrant Purple */
+    background-color: #dcdaf5; /* Original Vibrant Purple */
+    color: black;
     border: none; /* Remove border */
     border-radius: 40px; /* Fully rounded corners */
     height: 56px; /* Material Design suggested button height */
@@ -54,7 +54,7 @@ button {
 }
 
 .material-button:hover {
-    background-color: #7135fc; /* Slightly lighter purple */
+    background-color: #9e9cbd; /* Slightly lighter purple */
 }
 /* --- Wrapper Styling --- */
 .wrapper {
@@ -72,96 +72,101 @@ button {
 
 /* --- Navbar Styling --- */
 .navbar {
-    background-color: #F9F5F2;
+    background-color: #f2ecee; /* Matches the pastel lavender theme */
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: 100%; /* Full-width navbar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Wrapper ensures alignment with sections */
 .navbar .wrapper {
     max-width: 1240px;
-    margin: 0 auto; /* Centers the navbar content */
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Aligns logo and menu */
-    align-items: center; /* Vertically centers items */
-    padding: 15px 40px; /* Adds consistent padding */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
     box-sizing: border-box;
 }
 
-/* Logo Styling */
 .navbar-logo img {
-    height: 80px;
+    height: 60px;
     width: auto;
-    display: block;
 }
 
-/* Navbar Menu Styling */
 .navbar-menu {
-    display: flex; /* Horizontal layout for menu items */
-    gap: 30px; /* Space between items */
+    display: flex;
     list-style: none;
+    gap: 20px;
     margin: 0;
     padding: 0;
 }
 
 .navbar-menu li {
-    display: inline; /* Inline items */
+    display: inline;
 }
 
 .navbar-menu a {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+    color: #000000; /* Default black text */
+    font-weight: normal; /* Normal font weight by default */
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 30px; /* Pill-shaped background */
+    display: flex; /* Ensures alignment with icons if used */
+    align-items: center; /* Centers text vertically */
+    justify-content: start; /* Aligns text to the left */
+    gap: 10px; /* Adds spacing if there are icons */
+    transition: background-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease; /* Smooth transitions */
 }
 
 .navbar-menu a:hover {
-    color: #4285F4;
+    background-color: #e5dee2; /* Light gray hover background */
+    font-weight: bold; /* Text becomes bold on hover */
+    color: #4A4A4A; /* Darker gray text on hover */
 }
 
-/* --- Hamburger Menu Styling --- */
+.navbar-menu a.active {
+    background-color: #dcdaf5; /* Lavender purple background for active state */
+    font-weight: bold; /* Bold text for active link */
+    color: #4A4A4A; /* Darker gray text for active link */
+}
+
+
+/* --- Responsive Navbar --- */
 .navbar-toggle {
-    display: none; /* Hidden by default */
+    display: none;
     font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
-    color: #333;
+    color: #4A4A4A;
     padding: 10px;
 }
 
-/* --- Responsive Design --- */
 @media (max-width: 768px) {
-    .navbar .wrapper {
-        flex-direction: row; /* Keep logo and toggle button in a row */
-        justify-content: space-between;
-    }
-
     .navbar-menu {
-        display: none; /* Hide menu by default */
-        flex-direction: column; /* Stack items vertically */
-        gap: 15px;
-        background-color: #F9F5F2;
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        background-color: #F8F5FF;
         position: absolute;
-        top: 100%; /* Position menu below navbar */
-        right: 0;
+        top: 100%;
         left: 0;
-        padding: 20px;
+        right: 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
     }
 
     .navbar-menu.active {
-        display: flex; /* Show menu when active */
+        display: flex;
     }
 
     .navbar-toggle {
         display: block; /* Show hamburger menu button */
     }
 }
+
 
 
 
@@ -291,7 +296,7 @@ button {
 }
 
 .text-container {
-    background-color: #F9F5F2; /* Light beige */
+    background-color: #f8f1f6; /* Light beige */
     border-radius: 12px; /* Rounded corners */
     padding: 40px; /* Padding inside the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
@@ -300,7 +305,7 @@ button {
 
 /* --- Footer Section --- */
 footer {
-    background-color: #F9F5F2;
+    background-color: #f2ecee;
     color: #333333;
     text-align: center;
     padding: 20px 0;

@@ -3,160 +3,128 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google Material Design</title>
+    <title>Café D'Kirke</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Didot&family=Avenir:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
 
+    <!-- Navbar -->
     <header class="navbar">
       <div class="wrapper">
         <a href="#hero" class="navbar-logo">
-          <img src="assets/1.png" alt="Google Logo" />
+          <img src="assets/logo.png" alt="Café D'Kirke Logo" />
         </a>
-        <button class="navbar-toggle" aria-label="Toggle navigation">
-          &#9776; <!-- Unicode for hamburger icon -->
-        </button>
-        <ul class="navbar-menu">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#principles">Principles</a></li>
-          <li><a href="#components">Components</a></li>
-          <li><a href="#examples">Examples</a></li>
-          <li><a href="#resources">Resources</a></li>
-        </ul>
+        <nav>
+          <ul class="navbar-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="#reservation" class="btn-reserve">Reserve a Table</a>
       </div>
     </header>
     
+ <!-- Hero Section -->
+ <section id="hero" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Café D'Kirke</h1>
+    <img src="assets/hero-logo.png" alt="Hero Logo" class="hero-logo" />
+  </div>
+</section>
 
-
-    <!-- Full-width Hero Section -->
-    <section id="hero" class="hero">
-      <div class="overlay"></div>
+     <!-- About Section -->
+     <section id="about" class="about">
       <div class="wrapper">
-      <div class="hero-content">
-        <h1>Material Design: Inspiring the World of UX/UI</h1>
+        <h2>About Café D'Kirke</h2>
         <p>
-          Get an overview, resources, and examples to help you implement
-          Google's design language.
+          Welcome to Café D'Kirke, a sanctuary of culinary delight right in the
+          heart of Paris. Nestled within the bustling streets of Rue de
+          L'Exposition, our café offers a retreat into the world of traditional
+          French elegance blended with a touch of modernity.
         </p>
-        <!-- Button linked to the Principles section -->
-        <a href="#start" class="material-button">Start Exploring</a>
+        <a href="#reservation" class="btn-reserve">Reserve a Table</a>
       </div>
-    </div>
     </section>
 
-    <!-- Centered Content Section -->
-    <section id="start" class="material-description">
+       <!-- Menu Section -->
+       <section id="menu" class="menu">
+        <div class="wrapper">
+          <h2>Menu</h2>
+          <div class="menu-grid">
+            <div class="menu-section">
+              <h3>Boulangerie</h3>
+              <ul>
+                <li>Croissant au pain de chocolat - €5</li>
+                <li>Baguette, beurre, confiture - €8</li>
+                <li>Muffin, beurre, confiture - €8</li>
+                <li>Panier Le Boulanger - €15</li>
+              </ul>
+            </div>
+            <div class="menu-section">
+              <h3>Beverages</h3>
+              <ul>
+                <li>Café Allongé - €5</li>
+                <li>Double Espresso - €6</li>
+                <li>Hot Chocolate - €7</li>
+                <li>Tea - €5</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+          <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
       <div class="wrapper">
-        <h2>What is Material Design?</h2>
-        <p>
-          Material Design is a design system created by Google to help designers and developers build consistent, beautiful, and user-friendly interfaces for websites and apps. 
-        </p>
+        <h2>Reserve a Table</h2>
+        <form>
+          <label for="guests">Number of Guests:</label>
+          <input type="number" id="guests" name="guests" min="1" max="10" />
+
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" />
+
+          <label for="time">Time:</label>
+          <input type="time" id="time" name="time" />
+
+          <button type="submit" class="btn-reserve">Book Now</button>
+        </form>
       </div>
     </section>
 
-    <!-- Principles Section -->
-    <section id="principles" class="principle-section">
-      <div class="wrapper">
-        <div class="text-container">
-        <h2>Design Principles - Google Material Design</h2>
-        <div class="principle-item image-left">
-          <img
-            src="assets/unnamed11.png"
-            alt="Principle Image"
-            class="principle-image"
-          />
-          <div class="principle-text">
-            <h3>1. Inspired by the Real World</h3>
-            <p>
-              Material Design mimics real-world objects like paper. Shadows and layers help create depth, making the interface feel familiar and easy to understand.
-            </p>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+          <div class="wrapper">
+            <h2>Contact</h2>
+            <p>+33 6 34 56 65 72</p>
+            <p>info@CafeDKirke.fr</p>
+            <p>24 Rue De L'Exposition, 75007 Paris, France</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12..."
+              width="100%"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
           </div>
-        </div>
+        </section>
 
-        <div class="principle-item image-right">
-          <img
-            src="assets/unnamed4.png"
-            alt="Principle Image"
-            class="principle-image"
-          />
-          <div class="principle-text">
-            <h3>2. Bold, Graphic, and Intentional</h3>
-            <p>
-              Use strong colors, clear typography, and plenty of white space to make your designs clean and easy to navigate.
-            </p>
-          </div>
-        </div>
-
-        <div class="principle-item image-left">
-          <img
-            src="assets/unnamed5.png"
-            alt="Principle Image"
-            class="principle-image"
-          />
-          <div class="principle-text">
-            <h3>3. Motion Provides Meaning</h3>
-            <p>
-              Animations and transitions guide users through the interface. For example, when you click a button, it ripples to confirm your action.
-            </p>
-          </div>
-        </div>
-
-        <div class="principle-item image-right">
-          <img
-            src="assets/unnamed7.png"
-            alt="Principle Image"
-            class="principle-image"
-          />
-          <div class="principle-text">
-            <h3>4. Adaptive Design for All Screens</h3>
-            <p>
-              Material Design is responsive and works seamlessly on various
-              screen sizes and devices.
-            </p>
-          </div>
-        </div>
-
-        <div class="principle-item image-left">
-          <img
-            src="assets/unnamed2.png"
-            alt="Principle Image"
-            class="principle-image"
-          />
-          <div class="principle-text">
-            <h3>5. Consistent Components</h3>
-            <p>
-              Material Design provides standardized components like buttons, cards, and sliders for a unified experience across apps.
-            </p>
-          </div>
-        </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
+ <!-- Footer -->
+    <footer class="footer">
       <div class="wrapper">
         <p>
-          Created by Kirke Ruuven, a Junior UI/UX Designer inspired by Material
-          Design.
+          Created by Kirke Ruuven, a Junior UI/UX Designer inspired by elegant
+          café culture.
         </p>
         <p>© 2024 All Rights Reserved.</p>
       </div>
     </footer>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const toggleButton = document.querySelector(".navbar-toggle");
-        const menu = document.querySelector(".navbar-menu");
-    
-        toggleButton.addEventListener("click", () => {
-          menu.classList.toggle("active");
-        });
-      });
-    </script>
   </body>
 </html>

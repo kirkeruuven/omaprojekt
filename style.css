@@ -1,3 +1,8 @@
+/* Enable smooth scrolling for the whole document */
+html {
+    scroll-behavior: smooth;
+}
+
 /* General Body Styling */
 body {
     margin: 0;
@@ -25,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent body font */
-    font-size: 16px; /* Standard font size */
+    font-size: 14px; /* Standard font size */
     color: #555; /* Softer gray for readability */
     margin-bottom: 1.5rem;
 }
@@ -37,7 +42,7 @@ p {
     border: none;
     padding: 0.8rem 1.8rem;
     border-radius: 6px;
-    font-size:16pxrem;
+    font-size:16px;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -74,6 +79,7 @@ p {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     text-align: center; /* Ensure center alignment */
+    margin-bottom: 148px; /* Add space after the hero section */
 }
 
 /* Hero Overlay */
@@ -98,7 +104,23 @@ p {
     max-width: 440px; /* Adjust logo size */
     width: 100%; /* Full width within the maximum */
     height: auto; /* Maintain aspect ratio */
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(20px); /* Start slightly lower for a subtle slide-in effect */
+    animation: fadeIn 1.8s ease-out forwards; /* Apply fade-in animation */
 }
+
+/* Fade-In Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(80px); /* Initial position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(70px); /* Final position */
+    }
+}
+
 
 
 /* About Section */
@@ -107,6 +129,7 @@ p {
     flex-direction: column; /* Stack the image and text for mobile-first */
     margin: 0;
     padding: 0;
+    margin-bottom: 125px; /* Add space after the hero section */
 }
 
 .about-image img {
@@ -146,7 +169,7 @@ p {
 
 .about p {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.8; /* Improve readability */
     color: #555; /* Softer text color */
     margin-bottom: 1.5rem; /* Add space between paragraphs */
@@ -160,7 +183,7 @@ p {
 
 .menu h2 {
     font-family: 'EB Garamond', serif; /* Elegant serif font for headings */
-    font-size: 2.8rem; /* Large font size for the section title */
+    font-size: 40px; /* Large font size for the section title */
     color: #333; /* Dark color for emphasis */
     margin-bottom: 2rem; /* Spacing below the title */
     position: relative; /* Needed for the underline */
@@ -224,12 +247,10 @@ p {
 
 /* Menu Image Section */
 .menu-image img {
-    width: 100%; /* Full width for responsive display */
-    height: 541px; /* Maintain aspect ratio */
-    border-radius: 8px; /* Subtle rounding for a polished look */
-    object-fit: cover; /* Ensure image fills the container nicely */
-    margin-top: 2rem; /* Spacing above the image */
-}
+    height: 541px;;
+     width: 100%; /* Make the image span the full width */
+    object-fit: cover; /* Ensure it fills the space */
+    }
 
 /* Reservation Section */
 .reservation {

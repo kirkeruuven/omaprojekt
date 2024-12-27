@@ -38,24 +38,53 @@ p {
     margin-bottom: 1.5rem;
 }
 
-/* Button Styling */
+/* General Button Styling */
 .btn-reserve {
+    display: inline-block; /* Ensure it's treated as a button-like element */
     background-color: #29573B; /* Teal button color */
-    color: #ffffff;
-    border: none;
-    padding: 0.8rem 1.8rem;
-    border-radius: 6px;
-    font-size:16px;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent body font */
-  }
-  
-  .btn-reserve:hover {
+    color: #ffffff; /* White text */
+    border: none; /* Remove any borders */
+    padding: 0.8rem 1.8rem; /* Consistent padding */
+    border-radius: 6px; /* Rounded corners */
+    font-size: 16px; /* Uniform font size */
+    font-weight: 600; /* Bold text */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent font family */
+    text-align: center; /* Center-align text */
+    line-height: 1.4; /* Ensure proper spacing */
+}
+
+/* Button Hover Effect */
+.btn-reserve:hover {
     background-color: #21462f; /* Darker teal for hover */
-  }
+}
+
+/* For <button> Elements Specifically */
+button.btn-reserve {
+    display: inline-block; /* Ensure it's treated as a button-like element */
+    background-color: #29573B; /* Teal button color */
+    color: #ffffff; /* White text */
+    border: none; /* Remove any borders */
+    padding: 0.8rem 1.8rem; /* Consistent padding */
+    border-radius: 6px; /* Rounded corners */
+    font-size: 16px; /* Uniform font size */
+    font-weight: 600; /* Bold text */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent font family */
+    text-align: center; /* Center-align text */
+    line-height: 1.4; /* Ensure proper spacing */
+}
+
+/* Hover effect for <button> */
+button.btn-reserve:hover {
+    background-color: #21462f; /* Darker teal for hover */
+
+}
+
 
 /* Navbar Styling */
 .navbar {
@@ -331,7 +360,7 @@ p {
   
 /* Reservation Section */
 .reservation {
-    background-color: #ffffff; /* White background for form clarity */
+    background-color: #ffffff; /* White background */
     padding: 3rem 0; /* Top and bottom padding */
     text-align: center; /* Center-align content */
 }
@@ -339,31 +368,50 @@ p {
 .reservation h2 {
     font-family: 'EB Garamond', serif; /* Serif font for elegance */
     font-size: 40px; /* Adjusted font size */
-    margin-bottom: 2rem; /* Space below heading */
+    margin-bottom: 1.5rem; /* Space below heading */
     color: #333; /* Dark text color */
 }
 
-.reservation form {
-    max-width: 600px; /* Limit form width */
-    margin: 0 auto; /* Center the form */
-    display: grid; /* Grid layout for alignment */
-    grid-gap: 1.5rem; /* Spacing between form elements */
+.reservation p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 2rem;
 }
 
-.reservation label {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
+.reservation form {
+    max-width: 500px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+    display: grid; /* Grid layout */
+    gap: 1.5rem; /* Space between form groups */
+    padding: 1rem;
+    border: 1px solid #29573B; /* Light border around the form */
+    border-radius: 6px; /* Rounded corners */
+}
+
+/* Form Groups */
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and input */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 1rem;
-    color: #555; /* Softer gray for labels */
+    color: #555;
+}
+
+.form-group label i {
+    color: #231F20; /* Dark green for icons */
+    font-size: 1.2rem;
 }
 
 .reservation input {
+    flex: 1; /* Allow input to take remaining space */
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc; /* Light border for inputs */
-    border-radius: 5px; /* Rounded corners */
-    width: 100%; /* Full width inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
 }
-
 
 /* Contact Section */
 .contact {
@@ -378,7 +426,7 @@ p {
     font-size: 40px;
     margin-bottom: 2rem;
     color: #fff; /* White text for contrast */
-    text-align:center;
+    text-align: center;
 }
 
 .contact p {
@@ -386,7 +434,6 @@ p {
     font-size: 1rem;
     margin: 0.5rem 0; /* Consistent spacing */
     color: #fff; /* White text for contrast */
-
 }
 
 .contact iframe {
@@ -402,9 +449,10 @@ p {
 }
 
 .footer p {
-    margin: 0.5rem 0; /* Consistent paragraph spacing */
-    font-size: 0.9rem; /* Smaller text size */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
-    line-height: 1.5; /* Improve readability */
-    color: #fff; /* White text for contrast */
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+    color: #fff;
 }
+

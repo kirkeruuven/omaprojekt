@@ -6,7 +6,7 @@
     <title>Café D'Kirke</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="navbar">
@@ -166,24 +166,43 @@
       <img src="assets/bakery.jpg" alt="Bakery items display" />
     </div>
 
-    <!-- Reservation Section -->
-    <section id="reservation" class="reservation">
-      <div class="wrapper">
-        <h2>Reserve a Table</h2>
-        <form>
-          <label for="guests">Number of Guests:</label>
-          <input type="number" id="guests" name="guests" min="1" max="10" />
-
-          <label for="date">Date:</label>
-          <input type="date" id="date" name="date" />
-
-          <label for="time">Time:</label>
-          <input type="time" id="time" name="time" />
-
-          <button type="submit" class="btn-reserve">Book Now</button>
-        </form>
+<!-- Reservation Section -->
+<section id="reservation" class="reservation">
+  <div class="wrapper">
+    <h2>Reserve a Table</h2>
+    <p>For your convenience, please choose the number of guests, date, and time of booking. We will confirm the booking by email.</p>
+    <form>
+      <!-- Number of Guests -->
+      <div class="form-group">
+        <label for="guests">
+          <i class="fas fa-utensils"></i> Number of Guests:
+        </label>
+        <input type="number" id="guests" name="guests" min="1" max="10" />
       </div>
-    </section>
+
+      <!-- Date -->
+      <div class="form-group">
+        <label for="date">
+          <i class="fas fa-calendar-alt"></i> Date:
+        </label>
+        <input type="date" id="date" name="date" />
+      </div>
+
+      <!-- Time -->
+      <div class="form-group">
+        <label for="time">
+          <i class="fas fa-clock"></i> Preferred Time:
+        </label>
+        <input type="time" id="time" name="time" />
+      </div>
+
+      <!-- Book Now Button -->
+      <button type="submit" class="btn-reserve">Book Now</button>
+    </form>
+  </div>
+</section>
+
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">

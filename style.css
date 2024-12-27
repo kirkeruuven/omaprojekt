@@ -99,7 +99,7 @@ p {
     text-decoration: none; /* Remove underlines */
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px; /* Slightly larger for better readability */
-    font-weight: 500; /* Bolder for visibility */
+    font-weight: 400; /* Bolder for visibility */
     color: #333; /* Dark gray for links */
     transition: color 0.3s ease; /* Smooth color change */
 }

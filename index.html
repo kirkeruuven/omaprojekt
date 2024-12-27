@@ -216,38 +216,37 @@
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           anchor.addEventListener('click', function (e) {
               e.preventDefault();
-
+  
               const target = document.querySelector(this.getAttribute('href'));
               if (target) {
                   const targetPosition = target.getBoundingClientRect().top;
                   const startPosition = window.pageYOffset;
-                  const duration = 1000; // Duration in milliseconds
+                  const duration = 1000; // Reduced duration for faster scroll
                   let startTime = null;
-
+  
                   function animation(currentTime) {
                       if (!startTime) startTime = currentTime;
                       const timeElapsed = currentTime - startTime;
-
-                      const ease = easeInOutQuad(timeElapsed, startPosition, targetPosition, duration);
+  
+                      const ease = easeInQuad(timeElapsed, startPosition, targetPosition, duration);
                       window.scrollTo(0, ease);
-
+  
                       if (timeElapsed < duration) {
                           requestAnimationFrame(animation);
                       }
                   }
-
-                  function easeInOutQuad(t, b, c, d) {
-                      t /= d / 2;
-                      if (t < 1) return c / 2 * t * t + b;
-                      t--;
-                      return -c / 2 * (t * (t - 2) - 1) + b;
+  
+                  // Updated easing function for faster start
+                  function easeInQuad(t, b, c, d) {
+                      t /= d; // Normalize time
+                      return c * (t * t) + b; // Ease-in acceleration
                   }
-
+  
                   requestAnimationFrame(animation);
               }
           });
       });
-  </script>
+  </script>  
 
   </body>
 </html>

@@ -1,0 +1,192 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean and modern body text font */
+    background-color: #ffffff; /* White background for cleanliness */
+    color: #333; /* Dark gray text color for readability */
+    line-height: 1.8; /* Increased for better paragraph spacing */
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 90%; /* Margin for mobile views */
+    max-width: 1440px; /* Matches your 1440px container width */
+    margin: 0 auto; /* Centered layout */
+}
+
+/* Typography Updates */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'EB Garamond', serif; /* Elegant serif font for headings */
+    font-weight: 600; /* Semi-bold */
+    color: #222; /* Darker heading for contrast */
+    margin-bottom: 1rem;
+}
+
+p {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent with body text */
+    font-size: 16px; /* Standard text size */
+    color: #555; /* Softer gray for paragraph text */
+    margin-bottom: 1.5rem;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* White navbar */
+    padding: 1.5rem 3rem; /* Spacing updated for 1440px width */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Navbar Logo */
+.navbar-logo img {
+    height: 60px;
+    object-fit: contain; /* Ensures proper resizing */
+}
+
+.navbar-logo {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.8rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Increased gap for menu links */
+}
+
+.navbar-menu li {
+    display: inline-block;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333; /* Consistent with body text color */
+    font-weight: 500; /* Semi-bold for emphasis */
+    transition: color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    color: #29573B; /* A teal hover color for a modern look */
+}
+
+/* Reserve a Table Button */
+.btn-reserve {
+    background-color: #29573B; /* Dark green button color */
+    color: #ffffff; /* White text color */
+    padding: 14px 28px; /* Spacing inside the button */
+    font-size: 1rem; /* Font size */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Font family for consistency */
+    font-weight: 600; /* Semi-bold text */
+    border: none; /* Remove borders */
+    border-radius: 6px; /* Rounded corners */
+    text-align: center; /* Center-align the text */
+    text-decoration: none; /* Remove underline for links */
+    display: inline-block; /* Keep it inline */
+    cursor: pointer; /* Add pointer cursor for interactivity */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+/* Hover and Active State */
+.btn-reserve:hover {
+    background-color: #1e462f; /* Slightly darker green on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.btn-reserve:active {
+    transform: translateY(0); /* Reset when clicked */
+}
+
+/* Hero Section */
+.hero {
+    height: 600px; /* Adjust the height to fit your design */
+    background: url('assets/coffee.jpg') center/cover no-repeat; /* Use coffee.jpg as the background */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Overlay */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay for text/logo contrast */
+    z-index: 1; /* Ensure it overlays the background */
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: #ffffff; /* White text/logo for contrast */
+    z-index: 2; /* Ensure it sits above the overlay */
+}
+
+.hero-logo {
+    max-width: 250px; /* Adjust the logo size */
+    height: auto;
+}
+
+/* About Section */
+.about {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack the image and text for mobile-first */
+    margin: 0;
+    padding: 0;
+}
+
+.about-image img {
+    width: 100%; /* Make the image span the full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure it fills the space */
+}
+
+/* Text Content */
+.wrapper {
+    max-width: 1019px; /* Set the width of the text container */
+    margin: 0 auto; /* Center the wrapper horizontally */
+    padding: 0 2rem; /* Add side padding for smaller screens */
+    text-align: left; /* Align all text to the left */
+}
+
+.about h2 {
+    font-family: 'EB Garamond', serif; /* Elegant serif font */
+    font-size: 48px; /* Large heading size */
+    color: #222; /* Darker text color */
+    margin-bottom: 1.5rem; /* Add space below heading */
+    text-align: left; /* Align the title to the left */
+    position: relative; /* Required for the line styling */
+    padding-left: 0; /* No padding for the heading */
+}
+
+.about h2::before {
+    content: ''; /* Empty content for the line */
+    display: block;
+    position: absolute;
+    top: 100%; /* Position the line directly below the heading */
+    left: 0; /* Start from the left edge of the wrapper */
+    width: 719px; /* Set the exact width of the line */
+    height: 1px; /* Line thickness */
+    background-color: #29573B; /* Line color */
+}
+
+.about p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8; /* Improve readability */
+    color: #555; /* Softer text color */
+    margin-bottom: 1.5rem; /* Add space between paragraphs */
+}

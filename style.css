@@ -134,7 +134,8 @@ button.btn-reserve:hover {
 }
 
 .navbar-nav a:hover {
-    color: #29573B; /* Dark green on hover */
+    color: #29573B;
+text-decoration: underline;
 }
 
 
@@ -243,7 +244,6 @@ button.btn-reserve:hover {
 }
 
 /* Menu Section */
-/* Menu Section */
 .menu {
     padding: 4rem 2rem; /* Spacing around menu */
     background-color: #ffffff; /* White background */
@@ -304,12 +304,12 @@ button.btn-reserve:hover {
   }
   
   .boulangerie,
-  .beverage {
+  .beverages {
     flex: 1; /* Equal width sections */
   }
   
   .boulangerie h3,
-  .beverage h3 {
+  .beverages h3 {
     font-family: 'EB Garamond', serif;
     font-size: 1.8rem;
     color: #333; /* Darker color */
@@ -317,13 +317,13 @@ button.btn-reserve:hover {
   }
   
   .boulangerie ul,
-  .beverage ul {
+  .beverages ul {
     list-style: none; /* No bullets */
     padding: 0; /* Remove default padding */
   }
   
   .boulangerie li,
-  .beverage li {
+  .beverages li {
     display: flex; /* Arrange rows for item + price */
     justify-content: space-between; /* Align name and price */
     font-family: 'Helvetica Neue', Arial, sans-serif;

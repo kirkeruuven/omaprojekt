@@ -91,14 +91,15 @@ p {
 /* Navigation Links */
 .navbar-nav {
     display: flex;
-    gap: 2.5rem; /* Evenly spaced links */
+    gap: 80px; /* Evenly spaced links */
+    list-style-type: none;
 }
 
 .navbar-nav a {
     text-decoration: none; /* Remove underlines */
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 18px; /* Slightly larger for better readability */
-    font-weight: 600; /* Bolder for visibility */
+    font-size: 16px; /* Slightly larger for better readability */
+    font-weight: 500; /* Bolder for visibility */
     color: #333; /* Dark gray for links */
     transition: color 0.3s ease; /* Smooth color change */
 }

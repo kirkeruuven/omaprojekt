@@ -5,68 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Café D'Kirke</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="navbar">
       <div class="wrapper">
-          <!-- Logo -->
-          <a href="#home" class="navbar-logo">
-              <img src="assets/coffee cafe2.png" alt="Café D'Kirke Logo" />
-          </a>
-  
-          <!-- Navigation Links -->
-          <nav>
-              <ul class="navbar-nav">
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#menu">Menu</a></li>
-                  <li><a href="#contact">Contact</a></li>
-              </ul>
-          </nav>
-  
-          <!-- Reserve Button -->
-          <a href="#reservation" class="btn-reserve">Reserve a Table</a>
-      </div>
-  </header>
-  
+        <!-- Logo -->
+        <a href="#home" class="navbar-logo">
+          <img src="assets/coffee cafe2.png" alt="Café D'Kirke Logo" />
+        </a>
 
-<!-- Hero Section -->
-<section class="hero" id="home">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <img
-      src="assets/coffee cafe.png"
-      alt="Café D'Kirke Hero Logo"
-      class="hero-logo"
-    />
-  </div>
-</section>
+        <!-- Navigation Links -->
+        <nav>
+          <ul class="navbar-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="wrapper">
-        <h2>About Cafe D’Kirke</h2>
-        <p>
-          Welcome to Café D'Kirke, a sanctuary of culinary delight right in the
-          heart of Paris. Nestled within the bustling streets of Rue De
-          L'Exposition, our café offers a retreat into the world of traditional
-          French elegance blended with a touch of modernity.
-        </p>
-        <p>
-          At Café D'Kirke, we pride ourselves on blending the rich traditions of
-          French boulangerie with contemporary flavors that cater to the tastes
-          of our diverse clientele. Our café is a perfect spot for those seeking
-          a moment of peace with a touch of Parisian luxury.
-        </p>
-        <p>
-          <i>Due to the popularity of our quaint café and to ensure you have the
-          perfect experience, we recommend making a reservation.</i>
-        </p>
+        <!-- Reserve Button -->
         <a href="#reservation" class="btn-reserve">Reserve a Table</a>
       </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <img
+          src="assets/coffee cafe.png"
+          alt="Café D'Kirke Hero Logo"
+          class="hero-logo"
+        />
+      </div>
     </section>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="wrapper">
+    <h2>About Cafe D’Kirke</h2>
+    <p>
+      Welcome to Café D'Kirke, where tradition meets modernity in the heart of Paris. Nestled along the charming Rue De L'Exposition, our café is a haven for lovers of authentic French elegance and contemporary flavors.
+    </p>
+    <p>
+      We seamlessly blend the rich heritage of French boulangerie with creative culinary innovations, creating an experience that delights both the palate and the soul. Whether you're enjoying a quiet moment over coffee or celebrating a special occasion, every visit is crafted to be memorable.
+    </p>
+    <a href="#reservation" class="btn-reserve">Reserve a Table</a>
+  </div>
+</section>
 
     <!-- Coffee Pour Image -->
     <div class="about-image">
@@ -76,213 +71,219 @@
     <!-- Menu -->
     <section class="menu" id="menu">
       <div class="wrapper">
-      <h2>Menu</h2>
-    <div class="menu-container">
+        <h2>Menu</h2>
+        <div class="menu-container">
+          <!-- Boulangerie Section -->
+          <div class="menu-category boulangerie">
+            <h3>Boulangerie</h3>
+            <ul>
+              <li>
+                <div class="menu-item">
+                  <span>Croissant au pain au chocolat</span>
+                  <small>Chocolate or plain croissant</small>
+                </div>
+                <span class="menu-price">5</span>
+              </li>
+              <li>
+                <div class="menu-item">
+                  <span>Baguette, beurre, confiture</span>
+                  <small>Baguette, butter, jam</small>
+                </div>
+                <span class="menu-price">8</span>
+              </li>
+              <li>
+                <div class="menu-item">
+                  <span>Muffin, beurre, confiture</span>
+                  <small>English muffin, butter, jam</small>
+                </div>
+                <span class="menu-price">8</span>
+              </li>
+              <li>
+                <div class="menu-item">
+                  <span>Panier Le Boulanger</span>
+                  <small>Baker's assortment of pastries</small>
+                </div>
+                <span class="menu-price">15</span>
+              </li>
+            </ul>
+          </div>
 
-      <!-- Boulangerie Section -->
-      <div class="menu-category boulangerie">
-        <h3>Boulangerie</h3>
-        <ul>
-          <li>
-            <div class="menu-item">
-              <span>Croissant au pain au chocolat</span>
-              <small>Chocolate or plain croissant</small>
-            </div>
-            <span class="menu-price">5</span>
-          </li>
-          <li>
-            <div class="menu-item">
-              <span>Baguette, beurre, confiture</span>
-              <small>Baguette, butter, jam</small>
-            </div>
-            <span class="menu-price">8</span>
-          </li>
-          <li>
-            <div class="menu-item">
-              <span>Muffin, beurre, confiture</span>
-              <small>English muffin, butter, jam</small>
-            </div>
-            <span class="menu-price">8</span>
-          </li>
-          <li>
-            <div class="menu-item">
-              <span>Panier Le Boulanger</span>
-              <small>Baker's assortment of pastries</small>
-            </div>
-            <span class="menu-price">15</span>
-          </li>
-        </ul>
+          <!-- Beverages Section -->
+          <div class="menu-category beverages">
+            <h3>Beverages</h3>
+            <ul>
+              <li>
+                <div class="menu-item">
+                  <span>Café allongé</span>
+                  <small>American coffee</small>
+                </div>
+                <span class="menu-price">5</span>
+              </li>
+              <li>
+                <div class="menu-item">
+                  <span>Double espresso</span>
+                  <small>Double espresso</small>
+                </div>
+                <span class="menu-price">6</span>
+              </li>
+              <li>
+                <div class="menu-item">
+                  <span>Café crème</span>
+                  <small>White coffee</small>
+                </div>
+                <span class="menu-price">5</span>
+              </li>
+              <li>
+                <div class="menu-item">
+                  <span>Chocolat chaud</span>
+                  <small>Hot chocolate</small>
+                </div>
+                <span class="menu-price">5</span>
+              </li>
+              <li>
+                <div class="menu-item">
+                  <span>Thé</span>
+                  <small>Tea</small>
+                </div>
+                <span class="menu-price">6</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    
-      <!-- Beverages Section -->
-      <div class="menu-category beverages">
-        <h3>Beverages</h3>
-        <ul>
-          <li>
-            <div class="menu-item">
-              <span>Café allongé</span>
-              <small>American coffee</small>
-            </div>
-            <span class="menu-price">5</span>
-          </li>
-          <li>
-            <div class="menu-item">
-              <span>Double espresso</span>
-              <small>Double espresso</small>
-            </div>
-            <span class="menu-price">6</span>
-          </li>
-          <li>
-            <div class="menu-item">
-              <span>Café crème</span>
-              <small>White coffee</small>
-            </div>
-            <span class="menu-price">5</span>
-          </li>
-          <li>
-            <div class="menu-item">
-              <span>Chocolat chaud</span>
-              <small>Hot chocolate</small>
-            </div>
-            <span class="menu-price">5</span>
-          </li>
-          <li>
-            <div class="menu-item">
-              <span>Thé</span>
-              <small>Tea</small>
-            </div>
-            <span class="menu-price">6</span>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </div>
     </section>
-    
-    
 
     <!-- Image -->
     <div class="menu-image">
       <img src="assets/bakery.jpg" alt="Bakery items display" />
     </div>
 
-<!-- Reservation Section -->
-<section id="reservation" class="reservation">
-  <div class="wrapper">
-    <h2>Reserve a Table</h2>
-    <p>For your convenience, please choose the number of guests, date, and time of booking. We will confirm the booking by email.</p>
-    <form>
-      <!-- Number of Guests -->
-      <div class="form-group">
-        <label for="guests">
-          <i class="fas fa-utensils"></i> Number of Guests:
-        </label>
-        <input type="number" id="guests" name="guests" min="1" max="10" />
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
+      <div class="wrapper">
+        <h2>Reserve a Table</h2>
+        <p>
+          For your convenience, please choose the number of guests, date, and
+          time of booking. We will confirm the booking by email.
+        </p>
+        <form>
+          <!-- Number of Guests -->
+          <div class="form-group">
+            <label for="guests">
+              <i class="fas fa-utensils"></i> Number of Guests:
+            </label>
+            <input type="number" id="guests" name="guests" min="1" max="10" />
+          </div>
+
+          <!-- Date -->
+          <div class="form-group">
+            <label for="date">
+              <i class="fas fa-calendar-alt"></i> Date:
+            </label>
+            <input type="date" id="date" name="date" />
+          </div>
+
+          <!-- Time -->
+          <div class="form-group">
+            <label for="time">
+              <i class="fas fa-clock"></i> Preferred Time:
+            </label>
+            <input type="time" id="time" name="time" />
+          </div>
+
+          <!-- Book Now Button -->
+          <button type="submit" class="btn-reserve">Book Now</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="wrapper">
+        <h2>Contact</h2>
+
+        <!-- Contact Information Left -->
+        <div class="contact-left">
+          <p>+33 6 34 56 65 72</p>
+          <p>info@CafeDKirke.fr</p>
+        </div>
+
+        <!-- Contact Information Right -->
+        <div class="contact-right">
+          <p>24 Rue De L'Exposition</p>
+          <p>75007 Paris, France</p>
+        </div>
       </div>
 
-      <!-- Date -->
-      <div class="form-group">
-        <label for="date">
-          <i class="fas fa-calendar-alt"></i> Date:
-        </label>
-        <input type="date" id="date" name="date" />
+      <!-- Google Maps Embed -->
+      <div class="wrapper">
+        <iframe
+          src="https://maps.google.com/maps?width=100%25&amp;height=530&amp;hl=en&amp;q=24%20Rue%20De%20L'Exposition,%2075007%20Paris,%20France+(Café%20D'Kirke)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          width="100%"
+          height="530"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+        >
+        </iframe>
       </div>
+    </section>
 
-      <!-- Time -->
-      <div class="form-group">
-        <label for="time">
-          <i class="fas fa-clock"></i> Preferred Time:
-        </label>
-        <input type="time" id="time" name="time" />
+    <footer class="footer">
+      <div class="wrapper">
+        <img
+          src="assets/coffee cafe.png"
+          alt="Café D'Kirke Logo"
+          class="footer-logo"
+        />
+        <p>
+          Created by Kirke Ruuven, a Junior UI/UX Designer. © 2024 All Rights
+          Reserved.
+        </p>
       </div>
-
-      <!-- Book Now Button -->
-      <button type="submit" class="btn-reserve">Book Now</button>
-    </form>
-  </div>
-</section>
-
-
-
-<!-- Contact Section -->
-<section id="contact" class="contact">
-  <div class="wrapper">
-    <h2>Contact</h2>
-    
-    <!-- Contact Information Left -->
-    <div class="contact-left">
-        <p>+33 6 34 56 65 72</p>
-        <p>info@CafeDKirke.fr</p>
-    </div>
-
-    <!-- Contact Information Right -->
-    <div class="contact-right">
-        <p>24 Rue De L'Exposition</p>
-        <p>75007 Paris, France</p>
-    </div>
-  </div>
-
-  <!-- Google Maps Embed -->
-  <div class="wrapper">
-    <iframe 
-      src="https://maps.google.com/maps?width=100%25&amp;height=530&amp;hl=en&amp;q=24%20Rue%20De%20L'Exposition,%2075007%20Paris,%20France+(Café%20D'Kirke)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-      width="100%" 
-      height="530" 
-      frameborder="0" 
-      scrolling="no" 
-      marginheight="0" 
-      marginwidth="0">
-    </iframe>
-  </div>
-</section>
-
-
-
-
-<footer class="footer">
-  <div class="wrapper">
-      <img src="assets/coffee cafe.png" alt="Café D'Kirke Logo" class="footer-logo" />
-      <p>Created by Kirke Ruuven, a Junior UI/UX Designer. © 2024 All Rights Reserved.</p>
-  </div>
-</footer>
+    </footer>
 
     <script>
       // JavaScript for Smooth Scrolling
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function (e) {
-              e.preventDefault();
-  
-              const target = document.querySelector(this.getAttribute('href'));
-              if (target) {
-                  const targetPosition = target.getBoundingClientRect().top;
-                  const startPosition = window.pageYOffset;
-                  const duration = 1000; // Reduced duration for faster scroll
-                  let startTime = null;
-  
-                  function animation(currentTime) {
-                      if (!startTime) startTime = currentTime;
-                      const timeElapsed = currentTime - startTime;
-  
-                      const ease = easeInQuad(timeElapsed, startPosition, targetPosition, duration);
-                      window.scrollTo(0, ease);
-  
-                      if (timeElapsed < duration) {
-                          requestAnimationFrame(animation);
-                      }
-                  }
-  
-                  // Updated easing function for faster start
-                  function easeInQuad(t, b, c, d) {
-                      t /= d; // Normalize time
-                      return c * (t * t) + b; // Ease-in acceleration
-                  }
-  
-                  requestAnimationFrame(animation);
-              }
-          });
-      });
-  </script>  
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
 
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            const targetPosition = target.getBoundingClientRect().top;
+            const startPosition = window.pageYOffset;
+            const duration = 1000; // Reduced duration for faster scroll
+            let startTime = null;
+
+            function animation(currentTime) {
+              if (!startTime) startTime = currentTime;
+              const timeElapsed = currentTime - startTime;
+
+              const ease = easeInQuad(
+                timeElapsed,
+                startPosition,
+                targetPosition,
+                duration
+              );
+              window.scrollTo(0, ease);
+
+              if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+              }
+            }
+
+            // Updated easing function for faster start
+            function easeInQuad(t, b, c, d) {
+              t /= d; // Normalize time
+              return c * (t * t) + b; // Ease-in acceleration
+            }
+
+            requestAnimationFrame(animation);
+          }
+        });
+      });
+    </script>
   </body>
 </html>

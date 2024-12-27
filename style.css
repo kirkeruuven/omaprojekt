@@ -189,59 +189,57 @@ text-decoration: underline;
     }
 }
 
-
-
-/* About Section */
-.about {
-    display: flex; /* Flexbox layout */
-    flex-direction: column; /* Stack the image and text for mobile-first */
-    margin: 0;
-    padding: 0;
-    margin-bottom: 125px; /* Add space after the hero section */
-}
-
 .about-image img {
     height: 541px;;
     width: 100%; /* Make the image span the full width */
     object-fit: cover; /* Ensure it fills the space */
 }
-
-/* Text Content */
-.wrapper {
-    max-width: 1019px; /* Set the width of the text container */
-    margin: 0 auto; /* Center the wrapper horizontally */
-    padding: 0 2rem; /* Add side padding for smaller screens */
-    text-align: left; /* Align all text to the left */
-}
-
-.about h2 {
+/* About Section */
+.about {
+    background-color: #ffffff; /* White background */
+    margin: 100px 0; /* Top and bottom spacing */
+    text-align: center; /* Center-align all content */
+  }
+  
+  .about .wrapper {
+    max-width: 768px; /* Match the width of the content container */
+    margin: 0 auto; /* Center horizontally */
+    padding: 0 1rem; /* Add padding for mobile screens */
+  }
+  
+  .about h2 {
     font-family: 'EB Garamond', serif; /* Elegant serif font */
     font-size: 40px; /* Large heading size */
     color: #222; /* Darker text color */
-    margin-bottom: 1.5rem; /* Add space below heading */
-    text-align: left; /* Align the title to the left */
-    position: relative; /* Required for the line styling */
-    padding-left: 0; /* No padding for the heading */
-}
-
-.about h2::before {
-    content: ''; /* Empty content for the line */
-    display: block;
-    position: absolute;
-    top: 100%; /* Position the line directly below the heading */
-    left: 0; /* Start from the left edge of the wrapper */
-    width: 719px; /* Set the exact width of the line */
-    height: 1px; /* Line thickness */
-    background-color: #29573B; /* Line color */
-}
-
-.about p {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
+    margin-bottom: 50px; /* Space below the heading */
+  }
+  
+  .about p {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
+    font-size: 16px; /* Standard text size */
     line-height: 1.8; /* Improve readability */
     color: #555; /* Softer text color */
-    margin-bottom: 1.5rem; /* Add space between paragraphs */
-}
+    margin-bottom: 1.5rem; /* Space between paragraphs */
+  }
+
+  .about .btn-reserve {
+    display: inline-block; /* Inline button with padding */
+    background-color: #29573B; /* Dark green background */
+    color: #ffffff; /* White text */
+    padding: 0.8rem 1.8rem; /* Button padding */
+    font-size: 16px; /* Text size */
+    font-weight: 600; /* Bold text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 6px; /* Rounded corners */
+    margin-top: 100px; /* Add 100px space above the button */
+    transition: background-color 0.3s ease; /* Hover transition */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Button font */
+  }
+  
+  .about .btn-reserve:hover {
+    background-color: #21462f; /* Darker green for hover */
+  }
+
 
 /* Menu Section */
 .menu {
@@ -265,15 +263,7 @@ text-decoration: underline;
     font-weight: 600;
     text-align:center;
   }
-  
-  .menu h2::after {
-    content: '';
-    display: block;
-    width: 120px; /* Width of underline */
-    height: 1px; /* Thickness */
-    background-color: #29573B; /* Dark green color */
-    margin: 1rem auto 0;
-  }
+
 /* Menu Content Layout */
 .menu-container {
     display: grid; /* Use grid for precise positioning */

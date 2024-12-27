@@ -157,45 +157,50 @@
     <div class="menu-image">
       <img src="assets/bakery.jpg" alt="Bakery items display" />
     </div>
-
-    <!-- Reservation Section -->
-    <section id="reservation" class="reservation">
-      <div class="wrapper">
-        <h2>Reserve a Table</h2>
-        <p>
-          For your convenience, please choose the number of guests, date, and
-          time of booking. We will confirm the booking by email.
-        </p>
-        <form>
-          <!-- Number of Guests -->
-          <div class="form-group">
-            <label for="guests">
-              <i class="fas fa-utensils"></i> Number of Guests:
-            </label>
-            <input type="number" id="guests" name="guests" min="1" max="10" />
-          </div>
-
-          <!-- Date -->
-          <div class="form-group">
-            <label for="date">
-              <i class="fas fa-calendar-alt"></i> Date:
-            </label>
-            <input type="date" id="date" name="date" />
-          </div>
-
-          <!-- Time -->
-          <div class="form-group">
-            <label for="time">
-              <i class="fas fa-clock"></i> Preferred Time:
-            </label>
-            <input type="time" id="time" name="time" />
-          </div>
-
-          <!-- Book Now Button -->
-          <button type="submit" class="btn-reserve">Book Now</button>
-        </form>
+<!-- Reservation Section -->
+<section id="reservation" class="reservation">
+  <div class="wrapper">
+    <h2>Reserve a Table</h2>
+      <p>We will confirm the booking by email.
+    </p>
+    <form>
+      <h3>Cafe D'Kirke</h3>
+      <!-- Number of Guests -->
+      <div class="form-group">
+        <label for="guests">
+          <i class="fas fa-utensils"></i> Number of Guests
+        </label>
+        <input type="number" id="guests" name="guests" min="1" max="10" />
       </div>
-    </section>
+
+      <!-- Date -->
+      <div class="form-group">
+        <label for="date">
+          <i class="fas fa-calendar-alt"></i> Date
+        </label>
+        <input type="date" id="date" name="date" />
+      </div>
+
+      <!-- Time -->
+      <div class="form-group">
+        <label for="time">
+          <i class="fas fa-clock"></i> Preferred Time
+        </label>
+        <input type="time" id="time" name="time" />
+      </div>
+  <!-- Email Address -->
+  <div class="form-group">
+    <label for="email">
+      <i class="fas fa-envelope"></i> Email:
+    </label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+  </div>
+      <!-- Book Now Button -->
+      <button type="submit" class="btn-book">Book Now</button>
+    </form>
+  </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -216,7 +221,7 @@
       </div>
 
       <!-- Google Maps Embed -->
-      <div class="wrapper">
+      <div>
         <iframe
           src="https://maps.google.com/maps?width=100%25&amp;height=530&amp;hl=en&amp;q=24%20Rue%20De%20L'Exposition,%2075007%20Paris,%20France+(Café%20D'Kirke)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           width="100%"

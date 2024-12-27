@@ -351,56 +351,85 @@ text-decoration: underline;
 /* Reservation Section */
 .reservation {
     background-color: #ffffff; /* White background */
-    padding: 3rem 0; /* Top and bottom padding */
+    padding: 4rem 0; /* Increase top and bottom padding */
     text-align: center; /* Center-align content */
 }
 
 .reservation h2 {
-    font-family: 'EB Garamond', serif; /* Serif font for elegance */
-    font-size: 40px; /* Adjusted font size */
-    margin-bottom: 1.5rem; /* Space below heading */
+    font-family: 'EB Garamond', serif; /* Elegant serif font */
+    font-size: 40px; /* Large heading size */
     color: #333; /* Dark text color */
 }
 
 .reservation p {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 2rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
+    font-size: 18px; /* Slightly larger font */
+    line-height: 1.8; /* Improve readability */
+    color: #555; /* Softer text color */
+    margin-bottom: 3rem; /* Add more space below paragraph */
+    text-align: center; /* Center-align the paragraph */
 }
 
 .reservation form {
-    max-width: 500px; /* Limit form width */
+    max-width: 768px; /* Make the container smaller */
     margin: 0 auto; /* Center the form */
-    display: grid; /* Grid layout */
-    gap: 1.5rem; /* Space between form groups */
-    padding: 1rem;
-    border: 1px solid #29573B; /* Light border around the form */
-    border-radius: 6px; /* Rounded corners */
+    display: flex;
+    flex-direction: column; /* Stack form groups vertically */
+    gap: 1.2rem; /* Space between form groups */
+    padding: 4rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: #ffffff; /* Light background color */'
 }
 
 /* Form Groups */
 .form-group {
     display: flex;
-    align-items: center;
-    gap: 0.5rem; /* Space between icon and input */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1rem;
+    flex-direction: column; /* Stack the label and input */
+    align-items: center; /* Center-align contents */
+    gap: 0.5rem; /* Space between label and input */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Font for labels */
+    font-size: 16px;
     color: #555;
+    width: 100%; /* Ensure full width for group */
 }
 
 .form-group label i {
-    color: #231F20; /* Dark green for icons */
-    font-size: 1.2rem;
+    margin-right: 0.5rem; /* Add space between icon and text */
+    color: #29573B; /* Dark green for icons */
+    font-size: 1.3rem; /* Icon size */
 }
 
-.reservation input {
-    flex: 1; /* Allow input to take remaining space */
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
+.form-group input {
+    width: 100%; /* Full width of the container */
+    max-width: 300px; /* Limit input width */
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #f0f0f0; /* Subtle border */
+    border-radius: 6px;
+    text-align: left; /* Align text inside inputs */
+}
+
+.btn-book {
+    display: inline-block; 
+    width: 100%; /* Match the width of the input fields */
+    max-width: 177px; /* Limit width to match input fields' percentage */
+    padding: 0.8rem 1.8rem; /* Consistent padding */
+    font-size: 16px; /* Same font size as inputs */
+    color: #fff; /* White text color */
+    background-color: #29573B; /* Green background */
+    border: none; /* Remove default button border */
+    border-radius: 6px; /* Rounded corners */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent font family */
+    font-weight: 600;
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    margin: 1rem auto 0; /* Center align and add margin above */
+}
+
+.btn-book:hover {
+    background-color: #21462f; /* Slightly lighter green on hover */
 }
 
 /* Contact Section */
@@ -454,9 +483,11 @@ text-decoration: underline;
 .contact iframe {
     margin-top: 2rem; /* Space above the map */
     border-radius: 8px; /* Rounded corners for the map */
-    width: 100%; /* Full width for the map */
+    width: 100vw; /* Full screen width */
     height: 530px; /* Height matching design */
+    border: none; /* Remove border for cleaner look */
 }
+
 
 
 .footer {

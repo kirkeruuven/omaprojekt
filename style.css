@@ -94,8 +94,8 @@ button.btn-reserve:hover {
     background-color: #ffffff; /* White background */
     z-index: 1000; /* Ensure it's above other content */
     height: 90px; /* Height matching design */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* Light bottom border */
+
+    border-bottom: 1px solid #d5d5d5; /* Light bottom border */
 }
 
 /* Constrain content inside the navbar */
@@ -359,6 +359,11 @@ text-decoration: underline;
     font-family: 'EB Garamond', serif; /* Elegant serif font */
     font-size: 40px; /* Large heading size */
     color: #333; /* Dark text color */
+    margin-bottom: 50px;
+}
+
+.reservation h3{
+    color: #29573B;
 }
 
 .reservation p {
@@ -376,9 +381,10 @@ text-decoration: underline;
     display: flex;
     flex-direction: column; /* Stack form groups vertically */
     gap: 1.2rem; /* Space between form groups */
-    padding: 4rem;
+    padding: 1rem;
+    padding-bottom: 3rem;
     border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border: 1px solid #d5d5d5;
     background-color: #ffffff; /* Light background color */'
 }
 

@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Café D'Kirke</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <!-- Navbar -->
@@ -60,8 +58,8 @@
           a moment of peace with a touch of Parisian luxury.
         </p>
         <p>
-          Due to the popularity of our quaint café and to ensure you have the
-          perfect experience, we recommend making a reservation.
+          <i>Due to the popularity of our quaint café and to ensure you have the
+          perfect experience, we recommend making a reservation.</i>
         </p>
         <a href="#reservation" class="btn-reserve">Reserve a Table</a>
       </div>
@@ -73,57 +71,87 @@
     </div>
 
     <!-- Menu Section -->
-    <section id="menu" class="menu">
-      <div class="wrapper">
-        <h2>Menu</h2>
-        <div class="menu-container">
-          <!-- Boulangerie Section -->
-          <div class="menu-category">
-            <h3>Boulangerie</h3>
-            <ul>
-              <li>
+    <section class="menu">
+      <h2>Menu</h2>
+      <div class="menu-container">
+        <!-- Boulangerie Section -->
+        <div class="menu-category">
+          <h3>Boulangerie</h3>
+          <ul>
+            <li>
+              <div class="menu-item">
                 <span>Croissant au pain au chocolat</span>
-                <span>€5</span>
-              </li>
-              <li>
+                <small>Chocolate or plain croissant</small>
+              </div>
+              <span class="menu-price">5</span>
+            </li>
+            <li>
+              <div class="menu-item">
                 <span>Baguette, beurre, confiture</span>
-                <span>€8</span>
-              </li>
-              <li>
+                <small>Baguette, butter, jam</small>
+              </div>
+              <span class="menu-price">8</span>
+            </li>
+            <li>
+              <div class="menu-item">
                 <span>Muffin, beurre, confiture</span>
-                <span>€8</span>
-              </li>
-              <li>
+                <small>English muffin, butter, jam</small>
+              </div>
+              <span class="menu-price">8</span>
+            </li>
+            <li>
+              <div class="menu-item">
                 <span>Panier Le Boulanger</span>
-                <span>€15</span>
-              </li>
-            </ul>
-          </div>
-          <!-- Beverages Section -->
-          <div class="menu-category">
-            <h3>Beverages</h3>
-            <ul>
-              <li>
+                <small>Baker's assortment of pastries</small>
+              </div>
+              <span class="menu-price">15</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Beverages Section -->
+        <div class="menu-category">
+          <h3>Beverages</h3>
+          <ul>
+            <li>
+              <div class="menu-item">
                 <span>Café allongé</span>
-                <span>€5</span>
-              </li>
-              <li>
+                <small>American coffee</small>
+              </div>
+              <span class="menu-price">5</span>
+            </li>
+            <li>
+              <div class="menu-item">
                 <span>Double espresso</span>
-                <span>€6</span>
-              </li>
-              <li>
-                <span>Hot chocolate</span>
-                <span>€7</span>
-              </li>
-              <li>
-                <span>Tea</span>
-                <span>€5</span>
-              </li>
-            </ul>
-          </div>
+                <small>Double espresso</small>
+              </div>
+              <span class="menu-price">6</span>
+            </li>
+            <li>
+              <div class="menu-item">
+                <span>Café crème</span>
+                <small>White coffee</small>
+              </div>
+              <span class="menu-price">5</span>
+            </li>
+            <li>
+              <div class="menu-item">
+                <span>Chocolat chaud</span>
+                <small>Hot chocolate</small>
+              </div>
+              <span class="menu-price">7</span>
+            </li>
+            <li>
+              <div class="menu-item">
+                <span>Thé</span>
+                <small>Tea</small>
+              </div>
+              <span class="menu-price">5</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
+    
 
     <!-- Image -->
     <div class="menu-image">

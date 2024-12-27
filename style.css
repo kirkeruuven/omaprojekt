@@ -169,89 +169,98 @@ p {
 
 .about p {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.8; /* Improve readability */
     color: #555; /* Softer text color */
     margin-bottom: 1.5rem; /* Add space between paragraphs */
 }
+
 /* Menu Section */
 .menu {
-    padding: 4rem 2rem; /* Add spacing around the menu section */
-    background-color: #ffffff; /* White background for contrast */
-    text-align: center; /* Center-align the section header */
-}
-
-.menu h2 {
+    padding: 4rem 2rem; /* Spacing around menu */
+    background-color: #ffffff; /* White background */
+    text-align: center; /* Center the section heading */
+  }
+  
+  .menu h2 {
     font-family: 'EB Garamond', serif; /* Elegant serif font for headings */
-    font-size: 40px; /* Large font size for the section title */
-    color: #333; /* Dark color for emphasis */
-    margin-bottom: 2rem; /* Spacing below the title */
-    position: relative; /* Needed for the underline */
-}
-
-.menu h2::after {
-    content: ''; /* Decorative line */
+    font-size: 40px; /* Large title font */
+    color: #333; /* Dark color for contrast */
+    margin-bottom: 2rem;
+    position: relative; /* Needed for underline styling */
+    font-weight: 600;
+  }
+  
+  .menu h2::after {
+    content: '';
     display: block;
-    width: 120px; /* Width of the underline */
-    height: 1px; /* Height of the line */
+    width: 120px; /* Width of underline */
+    height: 1px; /* Thickness */
     background-color: #29573B; /* Dark green color */
-    margin: 1rem auto 0; /* Center it below the title */
-}
+    margin: 1rem auto 0;
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-direction: column; /* Stack categories vertically */
+    gap: 3rem; /* Space between sections */
+    max-width: 800px;
+    margin: 0 auto; /* Center container */
+    text-align: left; /* Align items to left */
+  }
 
-/* Menu Content Layout */
-.menu-container {
-    display: flex; /* Flexbox layout for categories */
-    justify-content: space-between; /* Space out the categories */
-    align-items: flex-start; /* Align items to the top */
-    max-width: 1200px; /* Restrict width of the content */
-    margin: 0 auto; /* Center the container */
-    text-align: left; /* Align text in categories to the left */
-    gap: 2rem; /* Space between categories */
-}
-
-.menu-category {
-    flex: 1; /* Make categories evenly distributed */
-}
-
-.menu-category h3 {
-    font-family: 'EB Garamond', serif; /* Elegant font for category titles */
-    font-size: 1.8rem; /* Slightly smaller than the section title */
+  .menu h3 {
+    margin-bottom: 50px;
+    font-weight: 400;
+  }
+  
+  .menu-category h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.8rem;
     color: #333; /* Darker color */
-    margin-bottom: 1rem; /* Spacing below the title */
-}
-
-.menu-category ul {
-    list-style: none; /* Remove default bullet points */
+  }
+  
+  .menu-category ul {
+    list-style: none; /* No bullets */
     padding: 0; /* Remove default padding */
-}
-
-.menu-category li {
-    display: flex; /* Arrange items in rows */
-    justify-content: space-between; /* Align name and price to the edges */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
-    font-size: 1rem; /* Adjusted font size */
-    color: #555; /* Softer gray for text */
-    margin-bottom: 1rem; /* Spacing between items */
-    border-bottom: 1px solid #ddd; /* Add a subtle line between items */
-    padding-bottom: 0.5rem; /* Space before the line */
-}
-
-.menu-category li span {
-    display: inline-block; /* Ensure text behaves correctly */
-}
-
-.menu-category li span:last-child {
-    color: #29573B; /* Highlight the price in dark green */
-    font-weight: 600; /* Bold the price for emphasis */
-}
-
-/* Menu Image Section */
-.menu-image img {
-    height: 541px;;
-     width: 100%; /* Make the image span the full width */
-    object-fit: cover; /* Ensure it fills the space */
-    }
-
+  }
+  
+  .menu-category li {
+    display: flex; /* Arrange rows for item + price */
+    justify-content: space-between; /* Align name and price */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem; /* Space before separator */
+  }
+  
+  .menu-item {
+    display: flex;
+    flex-direction: column; /* Stack name and description */
+    gap: 0.2rem; /* Small space between lines */
+  }
+  
+  .menu-item span {
+    font-weight: 550; /* Bold for the French name */
+  }
+  
+  .menu-item small {
+    font-size: 0.9rem; /* Smaller font for English description */
+    color: #777; /* Lighter text color for contrast */
+    font-style: italic; /* Italicize for style */
+    line-height: 1.2; /* Reduce line height */
+    margin-top: -4px; /* Adjust spacing above for tighter appearance */
+  }
+  
+  
+  .menu-price {
+    font-weight: 600; /* Emphasize price */
+    color: #29573B; /* Dark green */
+    font-size: 14px;
+  }
+  
+  
 /* Reservation Section */
 .reservation {
     background-color: #ffffff; /* White background for form clarity */

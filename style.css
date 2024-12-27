@@ -2,118 +2,78 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean and modern body text font */
-    background-color: #ffffff; /* White background for cleanliness */
-    color: #333; /* Dark gray text color for readability */
-    line-height: 1.8; /* Increased for better paragraph spacing */
-    overflow-x: hidden;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean and modern body font */
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark gray text for readability */
+    line-height: 1.8; /* Improved text spacing */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .wrapper {
-    width: 90%; /* Margin for mobile views */
-    max-width: 1440px; /* Matches your 1440px container width */
-    margin: 0 auto; /* Centered layout */
+    width: 90%; /* Base width for responsiveness */
+    max-width: 1440px; /* Restrict width to design's container */
+    margin: 0 auto; /* Center content */
 }
 
-/* Typography Updates */
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'EB Garamond', serif; /* Elegant serif font for headings */
-    font-weight: 600; /* Semi-bold */
-    color: #222; /* Darker heading for contrast */
+    font-weight: 600; /* Semi-bold for prominence */
+    color: #222; /* Darker heading color */
     margin-bottom: 1rem;
 }
 
 p {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent with body text */
-    font-size: 16px; /* Standard text size */
-    color: #555; /* Softer gray for paragraph text */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent body font */
+    font-size: 16px; /* Standard font size */
+    color: #555; /* Softer gray for readability */
     margin-bottom: 1.5rem;
 }
+
+/* Button Styling */
+.btn-reserve {
+    background-color: #29573B; /* Teal button color */
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    font-size:16pxrem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent body font */
+  }
+  
+  .btn-reserve:hover {
+    background-color: #21462f; /* Darker teal for hover */
+  }
 
 /* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffffff; /* White navbar */
-    padding: 1.5rem 3rem; /* Spacing updated for 1440px width */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
-    position: fixed;
+    padding: 1.5rem 3rem; /* Padding for the navbar */
+    background-color: #ffffff; /* White background */
+    position: fixed; /* Stick navbar to the top */
+    top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000; /* Ensure it’s above other content */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    height: 80px; /* Fixed height */
 }
 
-/* Navbar Logo */
-.navbar-logo img {
-    height: 60px;
-    object-fit: contain; /* Ensures proper resizing */
-}
-
-.navbar-logo {
-    font-family: 'EB Garamond', serif;
-    font-size: 1.8rem;
-    color: #333;
-    text-decoration: none;
-}
-
-.navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 2rem; /* Increased gap for menu links */
-}
-
-.navbar-menu li {
-    display: inline-block;
-}
-
-.navbar-menu a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #333; /* Consistent with body text color */
-    font-weight: 500; /* Semi-bold for emphasis */
-    transition: color 0.3s ease;
-}
-
-.navbar-menu a:hover {
-    color: #29573B; /* A teal hover color for a modern look */
-}
-
-/* Reserve a Table Button */
-.btn-reserve {
-    background-color: #29573B; /* Dark green button color */
-    color: #ffffff; /* White text color */
-    padding: 14px 28px; /* Spacing inside the button */
-    font-size: 1rem; /* Font size */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Font family for consistency */
-    font-weight: 600; /* Semi-bold text */
-    border: none; /* Remove borders */
-    border-radius: 6px; /* Rounded corners */
-    text-align: center; /* Center-align the text */
-    text-decoration: none; /* Remove underline for links */
-    display: inline-block; /* Keep it inline */
-    cursor: pointer; /* Add pointer cursor for interactivity */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
-}
-
-/* Hover and Active State */
-.btn-reserve:hover {
-    background-color: #1e462f; /* Slightly darker green on hover */
-    transform: translateY(-2px); /* Lift effect */
-}
-
-.btn-reserve:active {
-    transform: translateY(0); /* Reset when clicked */
-}
 
 /* Hero Section */
 .hero {
-    height: 600px; /* Adjust the height to fit your design */
-    background: url('assets/coffee.jpg') center/cover no-repeat; /* Use coffee.jpg as the background */
+    height: 600px; /* Height of the hero section */
+    background: url('assets/coffee.jpg') center/cover no-repeat; /* Full background image */
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Ensure center alignment */
 }
 
 /* Hero Overlay */
@@ -123,22 +83,23 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay for text/logo contrast */
-    z-index: 1; /* Ensure it overlays the background */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure it's above the background */
 }
 
 /* Hero Content */
 .hero-content {
     position: relative;
-    text-align: center;
-    color: #ffffff; /* White text/logo for contrast */
     z-index: 2; /* Ensure it sits above the overlay */
 }
 
+/* Hero Logo */
 .hero-logo {
-    max-width: 250px; /* Adjust the logo size */
-    height: auto;
+    max-width: 440px; /* Adjust logo size */
+    width: 100%; /* Full width within the maximum */
+    height: auto; /* Maintain aspect ratio */
 }
+
 
 /* About Section */
 .about {
@@ -149,8 +110,8 @@ p {
 }
 
 .about-image img {
+    height: 541px;;
     width: 100%; /* Make the image span the full width */
-    height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure it fills the space */
 }
 
@@ -164,7 +125,7 @@ p {
 
 .about h2 {
     font-family: 'EB Garamond', serif; /* Elegant serif font */
-    font-size: 48px; /* Large heading size */
+    font-size: 40px; /* Large heading size */
     color: #222; /* Darker text color */
     margin-bottom: 1.5rem; /* Add space below heading */
     text-align: left; /* Align the title to the left */
@@ -189,4 +150,163 @@ p {
     line-height: 1.8; /* Improve readability */
     color: #555; /* Softer text color */
     margin-bottom: 1.5rem; /* Add space between paragraphs */
+}
+/* Menu Section */
+.menu {
+    padding: 4rem 2rem; /* Add spacing around the menu section */
+    background-color: #ffffff; /* White background for contrast */
+    text-align: center; /* Center-align the section header */
+}
+
+.menu h2 {
+    font-family: 'EB Garamond', serif; /* Elegant serif font for headings */
+    font-size: 2.8rem; /* Large font size for the section title */
+    color: #333; /* Dark color for emphasis */
+    margin-bottom: 2rem; /* Spacing below the title */
+    position: relative; /* Needed for the underline */
+}
+
+.menu h2::after {
+    content: ''; /* Decorative line */
+    display: block;
+    width: 120px; /* Width of the underline */
+    height: 1px; /* Height of the line */
+    background-color: #29573B; /* Dark green color */
+    margin: 1rem auto 0; /* Center it below the title */
+}
+
+/* Menu Content Layout */
+.menu-container {
+    display: flex; /* Flexbox layout for categories */
+    justify-content: space-between; /* Space out the categories */
+    align-items: flex-start; /* Align items to the top */
+    max-width: 1200px; /* Restrict width of the content */
+    margin: 0 auto; /* Center the container */
+    text-align: left; /* Align text in categories to the left */
+    gap: 2rem; /* Space between categories */
+}
+
+.menu-category {
+    flex: 1; /* Make categories evenly distributed */
+}
+
+.menu-category h3 {
+    font-family: 'EB Garamond', serif; /* Elegant font for category titles */
+    font-size: 1.8rem; /* Slightly smaller than the section title */
+    color: #333; /* Darker color */
+    margin-bottom: 1rem; /* Spacing below the title */
+}
+
+.menu-category ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.menu-category li {
+    display: flex; /* Arrange items in rows */
+    justify-content: space-between; /* Align name and price to the edges */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
+    font-size: 1rem; /* Adjusted font size */
+    color: #555; /* Softer gray for text */
+    margin-bottom: 1rem; /* Spacing between items */
+    border-bottom: 1px solid #ddd; /* Add a subtle line between items */
+    padding-bottom: 0.5rem; /* Space before the line */
+}
+
+.menu-category li span {
+    display: inline-block; /* Ensure text behaves correctly */
+}
+
+.menu-category li span:last-child {
+    color: #29573B; /* Highlight the price in dark green */
+    font-weight: 600; /* Bold the price for emphasis */
+}
+
+/* Menu Image Section */
+.menu-image img {
+    width: 100%; /* Full width for responsive display */
+    height: 541px; /* Maintain aspect ratio */
+    border-radius: 8px; /* Subtle rounding for a polished look */
+    object-fit: cover; /* Ensure image fills the container nicely */
+    margin-top: 2rem; /* Spacing above the image */
+}
+
+/* Reservation Section */
+.reservation {
+    background-color: #ffffff; /* White background for form clarity */
+    padding: 3rem 0; /* Top and bottom padding */
+    text-align: center; /* Center-align content */
+}
+
+.reservation h2 {
+    font-family: 'EB Garamond', serif; /* Serif font for elegance */
+    font-size: 40px; /* Adjusted font size */
+    margin-bottom: 2rem; /* Space below heading */
+    color: #333; /* Dark text color */
+}
+
+.reservation form {
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+    display: grid; /* Grid layout for alignment */
+    grid-gap: 1.5rem; /* Spacing between form elements */
+}
+
+.reservation label {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
+    font-size: 1rem;
+    color: #555; /* Softer gray for labels */
+}
+
+.reservation input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc; /* Light border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width inputs */
+}
+
+
+/* Contact Section */
+.contact {
+    background-color: #29573B; /* Dark green background */
+    color: #ffffff; /* White text for contrast */
+    padding: 3rem 0; /* Top and bottom padding */
+    text-align: center; /* Center-align text */
+}
+
+.contact h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 40px;
+    margin-bottom: 2rem;
+    color: #fff; /* White text for contrast */
+
+}
+
+.contact p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    margin: 0.5rem 0; /* Consistent spacing */
+    color: #fff; /* White text for contrast */
+
+}
+
+.contact iframe {
+    margin-top: 2rem; /* Spacing above map */
+    border-radius: 8px; /* Rounded map corners */
+}
+
+/* Footer Section */
+.footer {
+    background-color: #29573B;
+    padding: 2rem 0; /* Spacing inside footer */
+    text-align: center; /* Center-align footer content */
+}
+
+.footer p {
+    margin: 0.5rem 0; /* Consistent paragraph spacing */
+    font-size: 0.9rem; /* Smaller text size */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
+    line-height: 1.5; /* Improve readability */
+    color: #fff; /* White text for contrast */
 }

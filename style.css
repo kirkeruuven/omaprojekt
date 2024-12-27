@@ -14,10 +14,13 @@ body {
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
+/* Wrapper: Ensures consistent margins throughout the page */
 .wrapper {
-    width: 90%; /* Base width for responsiveness */
-    max-width: 1440px; /* Restrict width to design's container */
+    width: calc(100% - 120px); /* Adjust to match Figma's design grid */
+    max-width: 1200px; /* Restrict maximum width */
     margin: 0 auto; /* Center content */
+    padding: 0; /* No additional padding inside the wrapper */
+    box-sizing: border-box; /* Include padding and borders in width calculation */
 }
 
 /* Typography */
@@ -56,39 +59,48 @@ p {
 
 /* Navbar Styling */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #ffffff;
-    position: fixed;
+    width: 100%; /* Full-width navbar */
+    position: fixed; /* Sticks the navbar to the top */
     top: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 70px; /* Ensure height matches */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* White background */
+    z-index: 1000; /* Ensure it's above other content */
+    height: 90px; /* Height matching design */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08); /* Light bottom border */
 }
 
+/* Constrain content inside the navbar */
+.navbar .wrapper {
+    width: calc(1440px - 60px - 60px); /* Match design with total width */
+    max-width: 1440px; /* Prevent exceeding 1440px */
+    margin: 0 auto; /* Center the content */
+    padding: 0; /* No additional padding */
+    display: flex; /* Align child elements horizontally */
+    justify-content: space-between; /* Space out logo, nav links, and button */
+    align-items: center; /* Center vertically */
+}
 
 /* Logo Styling */
 .navbar-logo img {
-    height: 77px; /* Fixed height for logo */
+    height: 88px; /* Fixed height for logo */
     width: auto; /* Maintain aspect ratio */
+    margin-right: 2rem; /* Space from the navigation menu */
+    margin-top: 0.2rem;
 }
 
 /* Navigation Links */
 .navbar-nav {
     display: flex;
-    gap: 2.5rem; /* Space between links */
+    gap: 2.5rem; /* Evenly spaced links */
 }
 
 .navbar-nav a {
-    text-decoration: none;
+    text-decoration: none; /* Remove underlines */
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px; /* Slightly larger for better readability */
+    font-weight: 600; /* Bolder for visibility */
     color: #333; /* Dark gray for links */
-    transition: color 0.3s ease; /* Smooth transition */
+    transition: color 0.3s ease; /* Smooth color change */
 }
 
 .navbar-nav a:hover {
@@ -221,6 +233,7 @@ p {
     margin-bottom: 2rem;
     position: relative; /* Needed for underline styling */
     font-weight: 600;
+    text-align:center;
   }
   
   .menu h2::after {
@@ -364,7 +377,7 @@ p {
     font-size: 40px;
     margin-bottom: 2rem;
     color: #fff; /* White text for contrast */
-
+    text-align:center;
 }
 
 .contact p {

@@ -443,16 +443,30 @@ button.btn-reserve:hover {
 
 /* Footer Section */
 .footer {
-    background-color: #29573B;
-    padding: 2rem 0; /* Spacing inside footer */
+    background-color: #29573B; /* Dark green background */
+    padding: 2rem 0; /* Space inside footer */
     text-align: center; /* Center-align footer content */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange content vertically */
+    align-items: center; /* Center-align content */
+    gap: 1rem; /* Space between elements */
+    position: relative; /* To enable positioning of the logo */
+}
+
+.footer-logo {
+    position: absolute; /* Position the logo */
+    top: -70px; /* Adjust to place the logo above the footer */
+    width: 100px; /* Set logo width */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .footer p {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
+    margin: 0.5rem 0; /* Consistent paragraph spacing */
+    font-size: 0.9rem; /* Smaller text size */
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.5;
-    color: #fff;
+    line-height: 1.5; /* Improve readability */
+    color: #fff; /* White text for contrast */
+    font-weight: 600;
 }
+
 

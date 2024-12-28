@@ -28,14 +28,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'EB Garamond', serif; /* Elegant serif font for headings */
     font-weight: 600; /* Semi-bold for prominence */
     color: #222; /* Darker heading color */
-    margin-bottom: 1rem;
 }
 
 p {
     font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent body font */
     font-size: 14px; /* Standard font size */
     color: #555; /* Softer gray for readability */
-    margin-bottom: 1.5rem;
 }
 
 /* General Button Styling */
@@ -243,9 +241,10 @@ text-decoration: underline;
 
 /* Menu Section */
 .menu {
-    padding: 4rem 2rem; /* Spacing around menu */
     background-color: #ffffff; /* White background */
     text-align: center; /* Center the section heading */
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 
   .menu-image img {
@@ -351,8 +350,8 @@ text-decoration: underline;
 /* Reservation Section */
 .reservation {
     background-color: #ffffff; /* White background */
-    padding: 4rem 0; /* Increase top and bottom padding */
     text-align: center; /* Center-align content */
+    margin-top: 100px;
 }
 
 .reservation h2 {
@@ -381,8 +380,8 @@ text-decoration: underline;
     display: flex;
     flex-direction: column; /* Stack form groups vertically */
     gap: 1.2rem; /* Space between form groups */
-    padding: 1rem;
-    padding-bottom: 3rem;
+margin-bottom: 100px;
+padding: 50px;
     border-radius: 6px;
     border: 1px solid #d5d5d5;
     background-color: #ffffff; /* Light background color */'
@@ -442,7 +441,6 @@ text-decoration: underline;
 .contact {
     background-color: #29573B; /* Dark green background */
     color: #ffffff; /* White text for contrast */
-    padding: 3rem 0; /* Top and bottom padding */
 }
 
 .contact .wrapper {
@@ -450,7 +448,7 @@ text-decoration: underline;
     max-width: 1200px; /* Prevent content from exceeding design width */
     margin: 0 auto; /* Center-align content */
     display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between left and right content */
+    justify-content: center; /* Adjusted to center the content */
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
     align-items: flex-start; /* Align items to the top */
 }
@@ -458,10 +456,11 @@ text-decoration: underline;
 .contact h2 {
     font-family: 'EB Garamond', serif; /* Elegant serif font */
     font-size: 40px; /* Font size matching design */
-    margin-bottom: 2rem; /* Space below the heading */
     color: #fff; /* White text for contrast */
     width: 100%; /* Ensure heading spans the full width */
     text-align: center; /* Center-align heading */
+    margin-bottom: 50px;
+    margin-top: 100px;
 }
 
 .contact p  {
@@ -475,7 +474,7 @@ text-decoration: underline;
     max-width: 45%; /* Ensure sections don't exceed this width */
     font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
     font-size: 16px; /* Standard font size */
-    line-height: 1.8; /* Improve readability */
+    line-height: 1; /* Improve readability */
 }
 
 .contact .contact-left {
@@ -483,17 +482,16 @@ text-decoration: underline;
 }
 
 .contact .contact-right {
-    text-align: right; /* Align text to the right */
+    text-align: left; /* Text align changed to left for consistency */
 }
 
 .contact iframe {
-    margin-top: 2rem; /* Space above the map */
+    margin-top: 100px; /* Space above the map */
     border-radius: 8px; /* Rounded corners for the map */
-    width: 100vw; /* Full screen width */
+    width: 100%; /* Full screen width adapted to the container */
     height: 530px; /* Height matching design */
     border: none; /* Remove border for cleaner look */
 }
-
 
 
 .footer {

@@ -7,7 +7,7 @@
     --button-bg-color: #1d3e29;
     --button-hover-bg-color: #346b48;
     --button-text-color: #ffffff;
-    --font-family-sans: 'Helvetica Neue', Arial, sans-serif;
+    --font-family-sans: 'montserrat', Arial, sans-serif;
     --font-family-serif: 'EB Garamond', serif;
     --accent-color: #1d3e29; // Green accent color
     --hover-color: #21462f; // Darker green for hover effects
@@ -29,8 +29,8 @@ body {
 }
 
 .wrapper {
-    width: calc(100% - 120px);
-    max-width: 1200px;
+    width: calc(1440px - 120px); /* Adjusts width based on navbar setup */
+    max-width: 1440px; /* Ensures it does not exceed standard maximum width */
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
@@ -55,7 +55,6 @@ p {
     color: var(--button-text-color);
     border: none;
     padding: 0.8rem 1.8rem;
-    border-radius: 6px;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
@@ -64,6 +63,7 @@ p {
     text-align: center;
     line-height: 1.4;
     font-family: var(--font-family-sans);
+    margin-top: 6.25rem;
 }
 
 .btn-reserve:hover, button.btn-reserve:hover {
@@ -133,6 +133,7 @@ p {
     height: 100%;
     object-fit: cover; /* Ensures video covers the entire section */
     z-index: 0; /* Places video below overlay and content */
+    border-bottom: #1d3e29 1px solid;
 }
 
 /* Overlay */
@@ -181,6 +182,8 @@ p {
     height: 541px; /* Specified height */
     width: 100%; /* Full width */
     object-fit: cover; /* Cover ensures img fully fills the space */
+    border-bottom: #1d3e29 1px solid;
+    border-top: #1d3e29 1px solid;
 }
 
 /* About Section */
@@ -226,6 +229,8 @@ p {
     height: 541px;
     width: 100%;
     object-fit: cover;
+    border-bottom: #1d3e29 1px solid;
+    border-top: #1d3e29 1px solid;
 }
 
 .menu h2 {
@@ -323,15 +328,15 @@ p {
 .reservation {
     background-color: var(--primary-bg-color);
     text-align: center;
-    margin-top: 100px;
-    padding: 50px 0; /* Uniform padding for consistency */
+    margin-top: 3rem;
+    padding: 1rem 0; /* Uniform padding for consistency */
 }
 
 .reservation h2 {
     font-family: var(--font-family-serif);
     font-size: 40px;
     color: var(--primary-text-color);
-    margin-bottom: 50px; /* Space below heading */
+    margin-bottom: 2rem; /* Space below heading */
 }
 
 .reservation p {
@@ -348,8 +353,8 @@ p {
     display: flex;  /* Using flexbox to organize children elements */
     flex-direction: column;  /* Stacking children elements vertically */
     gap: 1.2rem;  /* Space between each form group for visual separation */
-    margin-bottom: 100px;  /* Extra space below the form before next content */
-    padding: 50px;  /* Padding inside the form for spacing */
+    margin-bottom: 3rem;  /* Extra space below the form before next content */
+    padding: 2rem;  /* Padding inside the form for spacing */
     background-color: var(--primary-bg-color);  /* White background from the variable */
 }
 
@@ -391,14 +396,13 @@ p {
     font-size: 16px; /* Consistent with other form elements */
     color: var(--button-text-color); /* CSS variable for text color */
     background-color: var(--button-bg-color); /* CSS variable for background */
-    border: none; /* Clear border for a cleaner look */
-    border-radius: 6px; /* Smoothed corners for a modern appearance */
+    border: none; /* Clear border for a cleaner look */ 
     font-family: var(--font-family-sans); /* Consistent typography */
     font-weight: 600; /* Ensures emphasis is visually discernible */
     cursor: pointer; /* Indicates interactive element */
     text-align: center; /* Ensures text is properly aligned */
     transition: background-color 0.3s ease; /* Smooth transition for hover effects */
-    margin: 1rem auto 0; /* Margins for vertical rhythm and centering */
+    margin: 3rem auto 0; /* Margins for vertical rhythm and centering */
 }
 
 .btn-book:hover {
@@ -429,8 +433,8 @@ p {
     color: var(--button-text-color);
     width: 100%;
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 6.25rem;
+    margin-bottom: 3rem;
 }
 
 .contact p {
@@ -459,7 +463,7 @@ p {
     width: 100%; /* Responsive width */
     height: 530px; /* Specified height for the iframe */
     border: none; /* No border for a cleaner appearance */
-    margin-bottom: 100px; /* Space below the map before next content */
+    margin-bottom: 6.25rem; /* Space below the map before next content */
 }
 
 /* Footer Styles */

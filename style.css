@@ -72,46 +72,116 @@ p {
 
 /* Navbar */
 .navbar {
-    width: 100%;
-    position: fixed;
+    width: 100%; /* Full-width */
+    position: fixed; /* Sticks the navbar to the top */
     top: 0;
-    background-color: var(--accent-color);
-    z-index: 1000;
+    background-color: var(--accent-color); /* Background color */
+    z-index: 1000; /* Ensure it's above other content */
     height: 100px;
-    border-bottom: 1px solid #d5d5d5;
-}
-
-.navbar .wrapper {
+    border-bottom: 1px solid white; /* Subtle border */
+  }
+  
+  /* Wrapper for Navbar Content */
+  .navbar .wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Align items vertically */
+    width: calc(100% - 120px); /* Matches wrapper's max width */
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 0;
-}
-
-.navbar-logo img {
+    box-sizing: border-box;
+  }
+  
+  /* Logo Styling */
+  .navbar-logo img {
     height: 80px;
     width: auto;
-    margin-right: 2rem;
     margin-top: 0.5rem;
-}
-
-.navbar-nav {
-    display: flex;
-    gap: 80px;
-    list-style-type: none;
-}
-
-.navbar-nav a {
-    text-decoration: none;
+  }
+  
+  /* Navigation List */
+  .navbar-nav ul {
+    display: flex; /* Horizontal layout by default */
+    gap: 40px; /* Space between links */
+    list-style: none; /* Remove default bullets */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation Links */
+  .navbar-nav a {
+    text-decoration: none; /* Remove underline */
+    font-family: var(--font-family-sans);
     font-size: 16px;
-    font-weight: 400;
-    color: var(--primary-bg-color);
-}
+    font-weight: 500;
+    color: var(--primary-bg-color); /* White text */
+  }
+  
+  .navbar-nav a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  /* Tablet View (768px - 1024px) */
+  @media (max-width: 1024px) {
+    .navbar-nav ul {
+      gap: 20px; /* Reduce spacing between links */
+    }
+  }
+  
+  /* Mobile View (Below 768px) */
+  @media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column; /* Stack logo and nav */
+        align-items: stretch; /* Make it stretch across the screen */
+        width: 100%;
+        background-color: var(--accent-color); /* Green background */
+    }
 
-.navbar-nav a:hover {
-    color: var(--primary-bg-color);
-    text-decoration:underline
-}
+    .navbar .wrapper {
+        flex-direction: column; /* Stack logo and nav */
+        align-items: center; /* Center-align content */
+        width: 100%; /* Full width for wrapper */
+    }
+
+    .navbar-nav {
+        width: 100%; /* Green background spans full width */
+    }
+
+    .navbar-nav ul {
+        display: flex;
+        flex-direction: column; /* Vertical menu */
+        align-items: stretch; /* Ensure items stretch full width */
+        width: 100%; /* Full width */
+        background-color: var(--accent-color); /* Green background */
+        padding: 20px 0; /* Add spacing for visual clarity */
+        margin: 0;
+    }
+
+    .navbar-nav a {
+        display: block;
+        text-align: center; /* Center align text */
+        padding: 10px 20px; /* Add padding for easier clicks */
+        color: var(--primary-bg-color); /* White text */
+        text-decoration: none;
+    }
+  
+    .navbar-nav a:hover {
+      color: #fff;
+    }
+    
+    .hero-content {
+        margin-top: calc(6rem + 5vh); /* Adjusts spacing based on viewport height */
+        padding: 1rem; /* Optional padding for spacing consistency */
+    }
+
+    .hero-content h2{
+        font-size: 16px;
+    }
+  }
+  
+
 
 /* Hero Section */
 .hero {
@@ -505,19 +575,7 @@ p {
 
 /* Tablet Media Query */
 @media (max-width: 1024px) {
-    /* Navbar Adjustments */
-    .navbar .wrapper {
-        padding: 0 1rem; /* Add padding for a smaller screen */
-    }
-
-    .navbar-nav {
-        gap: 40px; /* Reduce the gap between menu items */
-    }
-
-    .navbar-logo img {
-        height: 70px; /* Shrink the logo size */
-    }
-
+    
     /* Contact Section Adjustments */
     .contact .wrapper {
         flex-direction: column; /* Stack contact sections vertically */

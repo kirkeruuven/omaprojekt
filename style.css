@@ -4,12 +4,12 @@
     --primary-text-color: #333;
     --secondary-text-color: #555;
     --heading-color: #222;
-    --button-bg-color: #29573B;
-    --button-hover-bg-color: #21462f;
+    --button-bg-color: #1d3e29;
+    --button-hover-bg-color: #346b48;
     --button-text-color: #ffffff;
     --font-family-sans: 'Helvetica Neue', Arial, sans-serif;
     --font-family-serif: 'EB Garamond', serif;
-    --accent-color: #29573B; // Green accent color
+    --accent-color: #1d3e29; // Green accent color
     --hover-color: #21462f; // Darker green for hover effects
     --border-color: #d5d5d5; // Light gray for borders
 }
@@ -75,7 +75,7 @@ p {
     width: 100%;
     position: fixed;
     top: 0;
-    background-color: var(--primary-bg-color);
+    background-color: var(--accent-color);
     z-index: 1000;
     height: 100px;
     border-bottom: 1px solid #d5d5d5;
@@ -89,10 +89,10 @@ p {
 }
 
 .navbar-logo img {
-    height: 88px;
+    height: 80px;
     width: auto;
     margin-right: 2rem;
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
 }
 
 .navbar-nav {
@@ -105,39 +105,55 @@ p {
     text-decoration: none;
     font-size: 16px;
     font-weight: 400;
-    color: var(--primary-text-color);
-    transition: color 0.3s ease;
+    color: var(--primary-bg-color);
 }
 
 .navbar-nav a:hover {
-    color: var(--button-bg-color);
-    text-decoration: underline;
+    color: var(--primary-bg-color);
+    text-decoration:underline
 }
 
 /* Hero Section */
 .hero {
-    height: calc(100vh - 70px);
+    position: relative;
+    height: calc(100vh - 59px); /* Fullscreen hero */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-    background: url('assets/coffee.jpg') center/cover no-repeat;
+    overflow: hidden; /* Ensure content stays within bounds */
 }
 
+/* Video Background */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the entire section */
+    z-index: 0; /* Places video below overlay and content */
+}
+
+/* Overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: 1; /* Places overlay above video */
 }
 
+.hero-content h2 {
+    color: white;
+}
+
+/* Hero Content */
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Places content above overlay and video */
 }
 
 .hero-logo {
@@ -149,9 +165,16 @@ p {
     animation: fadeIn 1.8s ease-out forwards;
 }
 
+/* Animation */
 @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(80px); }
-    100% { opacity: 1; transform: translateY(70px); }
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(70px);
+    }
 }
 
 .about-image img {
@@ -477,5 +500,36 @@ p {
     font-weight: 600; /* Bold text for emphasis */
 }
 
+/* Tablet Media Query */
+@media (max-width: 1024px) {
+    /* Navbar Adjustments */
+    .navbar .wrapper {
+        padding: 0 1rem; /* Add padding for a smaller screen */
+    }
 
+    .navbar-nav {
+        gap: 40px; /* Reduce the gap between menu items */
+    }
 
+    .navbar-logo img {
+        height: 70px; /* Shrink the logo size */
+    }
+
+    /* Contact Section Adjustments */
+    .contact .wrapper {
+        flex-direction: column; /* Stack contact sections vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .contact h2 {
+        font-size: 32px; /* Reduce heading size */
+    }
+
+    .contact p {
+        font-size: 14px; /* Reduce text size for readability */
+    }
+
+    .contact iframe {
+        height: 400px; /* Reduce map height for tablet screens */
+    }
+}

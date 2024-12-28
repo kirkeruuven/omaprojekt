@@ -91,7 +91,7 @@ button.btn-reserve:hover {
     top: 0;
     background-color: #ffffff; /* White background */
     z-index: 1000; /* Ensure it's above other content */
-    height: 90px; /* Height matching design */
+    height: 100px; /* Height matching design */
 
     border-bottom: 1px solid #d5d5d5; /* Light bottom border */
 }
@@ -441,6 +441,8 @@ padding: 50px;
 .contact {
     background-color: #29573B; /* Dark green background */
     color: #ffffff; /* White text for contrast */
+    border-bottom: white 1px solid;
+
 }
 
 .contact .wrapper {
@@ -465,7 +467,7 @@ padding: 50px;
 
 .contact p  {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .contact .contact-left,
@@ -491,12 +493,14 @@ padding: 50px;
     width: 100%; /* Full screen width adapted to the container */
     height: 530px; /* Height matching design */
     border: none; /* Remove border for cleaner look */
+    margin-bottom: 100px;
 }
 
 
 .footer {
     background-color: #29573B; /* Dark green background */
     padding: 2rem 0; /* Spacing inside footer */
+    position: relative; /* Needed for absolute positioning of children */
 }
 
 .footer .wrapper {
@@ -504,8 +508,9 @@ padding: 50px;
     max-width: 1440px; /* Prevent exceeding 1440px */
     margin: 0 auto; /* Center the content */
     display: flex; /* Align elements horizontally */
-    justify-content: space-between; /* Space out logo and text */
     align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between items */
+    position: relative; /* Establish a positioning context */
 }
 
 /* Footer Logo Styling */
@@ -516,12 +521,18 @@ padding: 50px;
 
 /* Footer Text Styling */
 .footer p {
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset the element by its own dimensions */
     margin: 0; /* Remove extra margin */
     font-size: 0.9rem; /* Smaller text size */
     font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent font */
     line-height: 1.5; /* Improve readability */
     color: #fff; /* White text */
-    text-align: ce; /* Align text to the right */
+    text-align: center; /* Center text alignment */
+    font-weight: 600;
 }
+
 
 

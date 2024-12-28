@@ -137,12 +137,14 @@ p {
         align-items: stretch; /* Make it stretch across the screen */
         width: 100%;
         background-color: var(--accent-color); /* Green background */
+    
     }
 
     .navbar .wrapper {
         flex-direction: column; /* Stack logo and nav */
         align-items: center; /* Center-align content */
         width: 100%; /* Full width for wrapper */
+        border-bottom: 1px solid white;
     }
 
     .navbar-nav {
@@ -155,16 +157,17 @@ p {
         align-items: stretch; /* Ensure items stretch full width */
         width: 100%; /* Full width */
         background-color: var(--accent-color); /* Green background */
-        padding: 20px 0; /* Add spacing for visual clarity */
+        padding: 10px 0; /* Add spacing for visual clarity */
         margin: 0;
     }
 
     .navbar-nav a {
         display: block;
         text-align: center; /* Center align text */
-        padding: 10px 20px; /* Add padding for easier clicks */
+        padding: 10px 10px; /* Add padding for easier clicks */
         color: var(--primary-bg-color); /* White text */
         text-decoration: none;
+        font-size: 10px;
     }
   
     .navbar-nav a:hover {
@@ -572,6 +575,72 @@ p {
     text-align: center; /* Ensures text is centered */
     font-weight: 600; /* Bold text for emphasis */
 }
+
+ /* Tablet View (768px - 1024px) */
+ @media (max-width: 1024px) {
+    .navbar-nav ul {
+      gap: 20px; /* Reduce spacing between links */
+    }
+  }
+  
+  /* Mobile View (Below 768px) */
+  @media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column; /* Stack logo and nav */
+        align-items: stretch; /* Make it stretch across the screen */
+        width: 100%;
+        background-color: var(--accent-color); /* Green background */
+    
+    }
+
+    .navbar .wrapper {
+        flex-direction: column; /* Stack logo and nav */
+        align-items: center; /* Center-align content */
+        width: 100%; /* Full width for wrapper */
+        border-bottom: 1px solid white;
+    }
+
+    .navbar-nav {
+        width: 100%; /* Green background spans full width */
+    }
+
+    .navbar-nav ul {
+        display: flex;
+        flex-direction: column; /* Vertical menu */
+        align-items: stretch; /* Ensure items stretch full width */
+        width: 100%; /* Full width */
+        background-color: var(--accent-color); /* Green background */
+        padding: 10px 0; /* Add spacing for visual clarity */
+        margin: 0;
+    }
+
+    .navbar-nav a {
+        display: block;
+        text-align: center; /* Center align text */
+        padding: 10px 10px; /* Add padding for easier clicks */
+        color: var(--primary-bg-color); /* White text */
+        text-decoration: none;
+        font-size: 10px;
+    }
+  
+    .navbar-nav a:hover {
+      color: #fff;
+    }
+    
+    .hero-content {
+        margin-top: calc(6rem + 5vh); /* Adjusts spacing based on viewport height */
+        padding: 1rem; /* Optional padding for spacing consistency */
+    }
+
+    .hero-content h2{
+        font-size: 16px;
+    }
+
+    .about{}
+  }
+  
+
 
 /* Tablet Media Query */
 @media (max-width: 1024px) {

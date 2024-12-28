@@ -63,7 +63,7 @@ p {
     text-align: center;
     line-height: 1.4;
     font-family: var(--font-family-sans);
-    margin-top: 6.25rem;
+    margin-top: 4rem;
 }
 
 .btn-reserve:hover, button.btn-reserve:hover {
@@ -383,7 +383,6 @@ p {
     max-width: 300px; /* Maximum width to control layout on larger screens */
     padding: 12px;
     border: 1px solid #f0f0f0; /* Light gray border for subtle delineation */
-    border-radius: 6px;
     text-align: left; /* Ensure text alignment is consistent */
 }
 
@@ -402,7 +401,7 @@ p {
     cursor: pointer; /* Indicates interactive element */
     text-align: center; /* Ensures text is properly aligned */
     transition: background-color 0.3s ease; /* Smooth transition for hover effects */
-    margin: 3rem auto 0; /* Margins for vertical rhythm and centering */
+    margin: 4rem auto 0; /* Margins for vertical rhythm and centering */
 }
 
 .btn-book:hover {
@@ -485,7 +484,7 @@ p {
 
 /* Footer Logo Styling */
 .footer-logo {
-    height: 88px; /* Height matches the navbar logo for consistency */
+    height: 80px; /* Height matches the navbar logo for consistency */
     width: auto; /* Keeps the image aspect ratio intact */
 }
 

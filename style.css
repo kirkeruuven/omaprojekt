@@ -1,145 +1,122 @@
-/* Enable smooth scrolling for the whole document */
+/* Basic Setup */
+:root {
+    --primary-bg-color: #ffffff;
+    --primary-text-color: #333;
+    --secondary-text-color: #555;
+    --heading-color: #222;
+    --button-bg-color: #29573B;
+    --button-hover-bg-color: #21462f;
+    --button-text-color: #ffffff;
+    --font-family-sans: 'Helvetica Neue', Arial, sans-serif;
+    --font-family-serif: 'EB Garamond', serif;
+    --accent-color: #29573B; // Green accent color
+    --hover-color: #21462f; // Darker green for hover effects
+    --border-color: #d5d5d5; // Light gray for borders
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-/* General Body Styling */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean and modern body font */
-    background-color: #ffffff; /* White background */
-    color: #333; /* Dark gray text for readability */
-    line-height: 1.8; /* Improved text spacing */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: var(--font-family-sans);
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    line-height: 1.8;
+    overflow-x: hidden;
 }
 
-/* Wrapper: Ensures consistent margins throughout the page */
 .wrapper {
-    width: calc(100% - 120px); /* Adjust to match Figma's design grid */
-    max-width: 1200px; /* Restrict maximum width */
-    margin: 0 auto; /* Center content */
-    padding: 0; /* No additional padding inside the wrapper */
-    box-sizing: border-box; /* Include padding and borders in width calculation */
+    width: calc(100% - 120px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'EB Garamond', serif; /* Elegant serif font for headings */
-    font-weight: 600; /* Semi-bold for prominence */
-    color: #222; /* Darker heading color */
+    font-family: var(--font-family-serif);
+    font-weight: 600;
+    color: var(--heading-color);
 }
 
 p {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent body font */
-    font-size: 14px; /* Standard font size */
-    color: #555; /* Softer gray for readability */
+    font-size: 14px;
+    color: var(--secondary-text-color);
 }
 
-/* General Button Styling */
-.btn-reserve {
-    display: inline-block; /* Ensure it's treated as a button-like element */
-    background-color: #29573B; /* Teal button color */
-    color: #ffffff; /* White text */
-    border: none; /* Remove any borders */
-    padding: 0.8rem 1.8rem; /* Consistent padding */
-    border-radius: 6px; /* Rounded corners */
-    font-size: 16px; /* Uniform font size */
-    font-weight: 600; /* Bold text */
-    text-decoration: none; /* Remove underline */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s ease; /* Smooth color transition */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent font family */
-    text-align: center; /* Center-align text */
-    line-height: 1.4; /* Ensure proper spacing */
+/* Buttons */
+.btn-reserve, button.btn-reserve {
+    display: inline-block;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    line-height: 1.4;
+    font-family: var(--font-family-sans);
 }
 
-/* Button Hover Effect */
-.btn-reserve:hover {
-    background-color: #21462f; /* Darker teal for hover */
+.btn-reserve:hover, button.btn-reserve:hover {
+    background-color: var(--button-hover-bg-color);
 }
 
-/* For <button> Elements Specifically */
-button.btn-reserve {
-    display: inline-block; /* Ensure it's treated as a button-like element */
-    background-color: #29573B; /* Teal button color */
-    color: #ffffff; /* White text */
-    border: none; /* Remove any borders */
-    padding: 0.8rem 1.8rem; /* Consistent padding */
-    border-radius: 6px; /* Rounded corners */
-    font-size: 16px; /* Uniform font size */
-    font-weight: 600; /* Bold text */
-    text-decoration: none; /* Remove underline */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s ease; /* Smooth color transition */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent font family */
-    text-align: center; /* Center-align text */
-    line-height: 1.4; /* Ensure proper spacing */
-}
-
-/* Hover effect for <button> */
-button.btn-reserve:hover {
-    background-color: #21462f; /* Darker teal for hover */
-
-}
-
-
-/* Navbar Styling */
+/* Navbar */
 .navbar {
-    width: 100%; /* Full-width navbar */
-    position: fixed; /* Sticks the navbar to the top */
+    width: 100%;
+    position: fixed;
     top: 0;
-    background-color: #ffffff; /* White background */
-    z-index: 1000; /* Ensure it's above other content */
-    height: 100px; /* Height matching design */
-
-    border-bottom: 1px solid #d5d5d5; /* Light bottom border */
+    background-color: var(--primary-bg-color);
+    z-index: 1000;
+    height: 100px;
+    border-bottom: 1px solid #d5d5d5;
 }
 
-/* Constrain content inside the navbar */
 .navbar .wrapper {
-    width: calc(1440px - 60px - 60px); /* Match design with total width */
-    max-width: 1440px; /* Prevent exceeding 1440px */
-    margin: 0 auto; /* Center the content */
-    padding: 0; /* No additional padding */
-    display: flex; /* Align child elements horizontally */
-    justify-content: space-between; /* Space out logo, nav links, and button */
-    align-items: center; /* Center vertically */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
 }
 
-/* Logo Styling */
 .navbar-logo img {
-    height: 88px; /* Fixed height for logo */
-    width: auto; /* Maintain aspect ratio */
-    margin-right: 2rem; /* Space from the navigation menu */
+    height: 88px;
+    width: auto;
+    margin-right: 2rem;
     margin-top: 0.2rem;
 }
 
-/* Navigation Links */
 .navbar-nav {
     display: flex;
-    gap: 80px; /* Evenly spaced links */
+    gap: 80px;
     list-style-type: none;
 }
 
 .navbar-nav a {
-    text-decoration: none; /* Remove underlines */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px; /* Slightly larger for better readability */
-    font-weight: 400; /* Bolder for visibility */
-    color: #333; /* Dark gray for links */
-    transition: color 0.3s ease; /* Smooth color change */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-text-color);
+    transition: color 0.3s ease;
 }
 
 .navbar-nav a:hover {
-    color: #29573B;
-text-decoration: underline;
+    color: var(--button-bg-color);
+    text-decoration: underline;
 }
-
 
 /* Hero Section */
 .hero {
-    height: calc(100vh - 70px); /* Adjust hero height if it overlaps */
+    height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,120 +125,93 @@ text-decoration: underline;
     background: url('assets/coffee.jpg') center/cover no-repeat;
 }
 
-/* Hero Overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    z-index: 1; /* Ensure it's above the background */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
-/* Hero Content */
 .hero-content {
     position: relative;
-    z-index: 2; /* Ensure it sits above the overlay */
+    z-index: 2;
 }
 
-/* Hero Logo */
 .hero-logo {
-    max-width: 440px; /* Adjust logo size */
-    width: 100%; /* Full width within the maximum */
-    height: auto; /* Maintain aspect ratio */
-    opacity: 0; /* Start fully transparent */
-    transform: translateY(20px); /* Start slightly lower for a subtle slide-in effect */
-    animation: fadeIn 1.8s ease-out forwards; /* Apply fade-in animation */
+    max-width: 440px;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.8s ease-out forwards;
 }
 
-/* Fade-In Keyframes */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(80px); /* Initial position */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(70px); /* Final position */
-    }
+    0% { opacity: 0; transform: translateY(80px); }
+    100% { opacity: 1; transform: translateY(70px); }
 }
 
 .about-image img {
-    height: 541px;;
-    width: 100%; /* Make the image span the full width */
-    object-fit: cover; /* Ensure it fills the space */
+    height: 541px; /* Specified height */
+    width: 100%; /* Full width */
+    object-fit: cover; /* Cover ensures img fully fills the space */
 }
+
 /* About Section */
 .about {
-    background-color: #ffffff; /* White background */
-    margin: 100px 0; /* Top and bottom spacing */
-    text-align: center; /* Center-align all content */
-  }
-  
-  .about .wrapper {
-    max-width: 768px; /* Match the width of the content container */
-    margin: 0 auto; /* Center horizontally */
-    padding: 0 1rem; /* Add padding for mobile screens */
-  }
-  
-  .about h2 {
-    font-family: 'EB Garamond', serif; /* Elegant serif font */
-    font-size: 40px; /* Large heading size */
-    color: #222; /* Darker text color */
-    margin-bottom: 50px; /* Space below the heading */
-  }
-  
-  .about p {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
-    font-size: 16px; /* Standard text size */
-    line-height: 1.8; /* Improve readability */
-    color: #555; /* Softer text color */
-    margin-bottom: 1.5rem; /* Space between paragraphs */
-  }
+    background-color: var(--primary-bg-color);
+    margin: 100px 0; /* Vertical spacing */
+    text-align: center; /* Center content */
+}
 
-  .about .btn-reserve {
-    display: inline-block; /* Inline button with padding */
-    background-color: #29573B; /* Dark green background */
-    color: #ffffff; /* White text */
-    padding: 0.8rem 1.8rem; /* Button padding */
-    font-size: 16px; /* Text size */
-    font-weight: 600; /* Bold text */
-    text-decoration: none; /* Remove underline */
-    border-radius: 6px; /* Rounded corners */
-    margin-top: 100px; /* Add 100px space above the button */
-    transition: background-color 0.3s ease; /* Hover transition */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Button font */
-  }
-  
-  .about .btn-reserve:hover {
-    background-color: #21462f; /* Darker green for hover */
-  }
+.about .wrapper {
+    max-width: 768px; /* Optimal reading width */
+    margin: 0 auto; /* Center wrapper */
+    padding: 0 1rem; /* Horizontal padding */
+}
 
+/* Typography within About Section */
+.about h2, .about p {
+    font-family: var(--font-family-serif);
+    color: var(--primary-text-color);
+    margin-bottom: 1.5rem; /* Consistent bottom margin */
+}
+
+.about h2 {
+    font-size: 40px; /* Prominent heading size */
+}
+
+.about p {
+    font-family: var(--font-family-sans);
+    font-size: 16px; /* Standard paragraph font size */
+    line-height: 1.8; /* Enhances readability */
+    color: var(--secondary-text-color); /* Softer color for paragraphs */
+}
 
 /* Menu Section */
+/* Menu Section */
 .menu {
-    background-color: #ffffff; /* White background */
-    text-align: center; /* Center the section heading */
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-
-  .menu-image img {
-    height: 541px;;
-    width: 100%; /* Make the image span the full width */
-    object-fit: cover; /* Ensure it fills the space */
+    background-color: var(--background-color);
+    text-align: center;
+    margin: 100px 0;
 }
-  
-  .menu h2 {
-    font-family: 'EB Garamond', serif; /* Elegant serif font for headings */
-    font-size: 40px; /* Large title font */
-    color: #333; /* Dark color for contrast */
+
+.menu-image img {
+    height: 541px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu h2 {
+    font-family: var(--font-family-serif);
+    font-size: 40px;
+    color: var(--heading-color);
     margin-bottom: 2rem;
-    position: relative; /* Needed for underline styling */
     font-weight: 600;
-    text-align:center;
-  }
+}
 
 /* Menu Content Layout */
 .menu-container {
@@ -299,7 +249,7 @@ text-decoration: underline;
   
   .boulangerie h3,
   .beverages h3 {
-    font-family: 'EB Garamond', serif;
+    font-family: var(--font-family-serif);
     font-size: 1.8rem;
     color: #333; /* Darker color */
     margin-bottom: 1rem;
@@ -315,7 +265,7 @@ text-decoration: underline;
   .beverages li {
     display: flex; /* Arrange rows for item + price */
     justify-content: space-between; /* Align name and price */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: var(--font-family-sans);
     font-size: 1rem;
     color: #555;
     margin-bottom: 1rem;
@@ -334,7 +284,7 @@ text-decoration: underline;
   
   .menu-item small {
     font-size: 0.9rem; /* Smaller font for English description */
-    color: #777; /* Lighter text color for contrast */
+    color: var(--secondary-text-color); /* Lighter text color for contrast */
     font-style: italic; /* Italicize for style */
     line-height: 1.2; /* Reduce line height */
     margin-top: -4px; /* Adjust spacing above for tighter appearance */
@@ -342,196 +292,189 @@ text-decoration: underline;
   
   .menu-price {
     font-weight: 600; /* Emphasize price */
-    color: #29573B; /* Dark green */
     font-size: 14px;
   }
   
   
 /* Reservation Section */
 .reservation {
-    background-color: #ffffff; /* White background */
-    text-align: center; /* Center-align content */
+    background-color: var(--primary-bg-color);
+    text-align: center;
     margin-top: 100px;
+    padding: 50px 0; /* Uniform padding for consistency */
 }
 
 .reservation h2 {
-    font-family: 'EB Garamond', serif; /* Elegant serif font */
-    font-size: 40px; /* Large heading size */
-    color: #333; /* Dark text color */
-    margin-bottom: 50px;
-}
-
-.reservation h3{
-    color: #29573B;
+    font-family: var(--font-family-serif);
+    font-size: 40px;
+    color: var(--primary-text-color);
+    margin-bottom: 50px; /* Space below heading */
 }
 
 .reservation p {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
-    font-size: 18px; /* Slightly larger font */
-    line-height: 1.8; /* Improve readability */
-    color: #555; /* Softer text color */
-    margin-bottom: 3rem; /* Add more space below paragraph */
-    text-align: center; /* Center-align the paragraph */
+    font-family: var(--font-family-sans);
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--secondary-text-color);
+    margin-bottom: 3rem; /* Consistent spacing below paragraph */
 }
 
 .reservation form {
-    max-width: 768px; /* Make the container smaller */
-    margin: 0 auto; /* Center the form */
-    display: flex;
-    flex-direction: column; /* Stack form groups vertically */
-    gap: 1.2rem; /* Space between form groups */
-margin-bottom: 100px;
-padding: 50px;
-    border-radius: 6px;
-    border: 1px solid #d5d5d5;
-    background-color: #ffffff; /* Light background color */'
+    max-width: 768px;  /* Restricting the form width for better focus and readability */
+    margin: 0 auto;  /* Centers the form horizontally within its container */
+    display: flex;  /* Using flexbox to organize children elements */
+    flex-direction: column;  /* Stacking children elements vertically */
+    gap: 1.2rem;  /* Space between each form group for visual separation */
+    margin-bottom: 100px;  /* Extra space below the form before next content */
+    padding: 50px;  /* Padding inside the form for spacing */
+    background-color: var(--primary-bg-color);  /* White background from the variable */
 }
+
 
 /* Form Groups */
 .form-group {
     display: flex;
-    flex-direction: column; /* Stack the label and input */
-    align-items: center; /* Center-align contents */
-    gap: 0.5rem; /* Space between label and input */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Font for labels */
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-family-sans);
     font-size: 16px;
-    color: #555;
-    width: 100%; /* Ensure full width for group */
+    color: var(--secondary-text-color);
+    width: 100%; /* Full width to accommodate various form factors */
 }
 
+
 .form-group label i {
-    margin-right: 0.5rem; /* Add space between icon and text */
-    color: #29573B; /* Dark green for icons */
-    font-size: 1.3rem; /* Icon size */
+    margin-right: 0.5rem;
+    color: var(--accent-color); /* Using variable for icon color */
+    font-size: 1.3rem; /* Clear, readable size for icons */
 }
 
 .form-group input {
-    width: 100%; /* Full width of the container */
-    max-width: 300px; /* Limit input width */
+    width: 100%;
+    max-width: 300px; /* Maximum width to control layout on larger screens */
     padding: 12px;
-    font-size: 16px;
-    border: 1px solid #f0f0f0; /* Subtle border */
+    border: 1px solid #f0f0f0; /* Light gray border for subtle delineation */
     border-radius: 6px;
-    text-align: left; /* Align text inside inputs */
+    text-align: left; /* Ensure text alignment is consistent */
 }
 
+/* Booking Button Styles */
 .btn-book {
-    display: inline-block; 
-    width: 100%; /* Match the width of the input fields */
-    max-width: 177px; /* Limit width to match input fields' percentage */
-    padding: 0.8rem 1.8rem; /* Consistent padding */
-    font-size: 16px; /* Same font size as inputs */
-    color: #fff; /* White text color */
-    background-color: #29573B; /* Green background */
-    border: none; /* Remove default button border */
-    border-radius: 6px; /* Rounded corners */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent font family */
-    font-weight: 600;
-    cursor: pointer; /* Pointer cursor on hover */
-    text-align: center; /* Center the text */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-    margin: 1rem auto 0; /* Center align and add margin above */
+    display: inline-block;
+    width: 100%; /* Matches the width of input fields for consistency */
+    max-width: 177px; /* Specific maximum width for design precision */
+    padding: 0.8rem 1.8rem; /* Uniform padding for better usability */
+    font-size: 16px; /* Consistent with other form elements */
+    color: var(--button-text-color); /* CSS variable for text color */
+    background-color: var(--button-bg-color); /* CSS variable for background */
+    border: none; /* Clear border for a cleaner look */
+    border-radius: 6px; /* Smoothed corners for a modern appearance */
+    font-family: var(--font-family-sans); /* Consistent typography */
+    font-weight: 600; /* Ensures emphasis is visually discernible */
+    cursor: pointer; /* Indicates interactive element */
+    text-align: center; /* Ensures text is properly aligned */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+    margin: 1rem auto 0; /* Margins for vertical rhythm and centering */
 }
 
 .btn-book:hover {
-    background-color: #21462f; /* Slightly lighter green on hover */
+    background-color: var(--button-hover-bg-color); /* Variable for hover state */
 }
 
-/* Contact Section */
-.contact {
-    background-color: #29573B; /* Dark green background */
-    color: #ffffff; /* White text for contrast */
-    border-bottom: white 1px solid;
 
+/* Contact Section Styles */
+.contact {
+    background-color: var(--button-bg-color); /* Dark green background from variables */
+    color: var(--button-text-color); /* White text from variables */
+    border-bottom: 1px solid var(--button-text-color); /* Consistent color variable */
 }
 
 .contact .wrapper {
-    width: 90%; /* Standard wrapper alignment */
-    max-width: 1200px; /* Prevent content from exceeding design width */
-    margin: 0 auto; /* Center-align content */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Adjusted to center the content */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    align-items: flex-start; /* Align items to the top */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .contact h2 {
-    font-family: 'EB Garamond', serif; /* Elegant serif font */
-    font-size: 40px; /* Font size matching design */
-    color: #fff; /* White text for contrast */
-    width: 100%; /* Ensure heading spans the full width */
-    text-align: center; /* Center-align heading */
-    margin-bottom: 50px;
+    font-family: var(--font-family-serif);
+    font-size: 40px;
+    color: var(--button-text-color);
+    width: 100%;
+    text-align: center;
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 
-.contact p  {
-    color: white;
-    font-size: 18px;
+.contact p {
+    font-size: 18px; /* Standard font size for body text */
+    line-height: 1; /* Improved readability */
+    color: var(--button-text-color);
 }
 
 .contact .contact-left,
 .contact .contact-right {
-    flex: 1; /* Take up equal space */
-    max-width: 45%; /* Ensure sections don't exceed this width */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean sans-serif font */
-    font-size: 16px; /* Standard font size */
-    line-height: 1; /* Improve readability */
+    flex: 1;
+    max-width: 45%;
+    font-family: var(--font-family-sans);
+    font-size: 16px; /* Maintaining consistent font size across the section */
+    line-height: 1.8; /* Adjusted for better text readability */
 }
 
-.contact .contact-left {
-    text-align: left; /* Align text to the left */
-}
-
+.contact .contact-left,
 .contact .contact-right {
-    text-align: left; /* Text align changed to left for consistency */
+    text-align: left; /* Uniform text alignment */
 }
 
 .contact iframe {
-    margin-top: 100px; /* Space above the map */
-    border-radius: 8px; /* Rounded corners for the map */
-    width: 100%; /* Full screen width adapted to the container */
-    height: 530px; /* Height matching design */
-    border: none; /* Remove border for cleaner look */
-    margin-bottom: 100px;
+    margin-top: 100px; /* Space above the map for better layout */
+    border-radius: 8px; /* Smoothed corners for aesthetics */
+    width: 100%; /* Responsive width */
+    height: 530px; /* Specified height for the iframe */
+    border: none; /* No border for a cleaner appearance */
+    margin-bottom: 100px; /* Space below the map before next content */
 }
 
-
+/* Footer Styles */
 .footer {
-    background-color: #29573B; /* Dark green background */
-    padding: 2rem 0; /* Spacing inside footer */
-    position: relative; /* Needed for absolute positioning of children */
+    background-color: var(--button-bg-color); /* Utilizes variable for background color */
+    padding: 2rem 0; /* Consistent vertical padding */
+    position: relative; /* Establishes a stacking context */
 }
 
 .footer .wrapper {
-    width: calc(1440px - 60px - 60px); /* Match navbar width */
-    max-width: 1440px; /* Prevent exceeding 1440px */
-    margin: 0 auto; /* Center the content */
-    display: flex; /* Align elements horizontally */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Distribute space between items */
-    position: relative; /* Establish a positioning context */
+    width: calc(1440px - 120px); /* Adjusts width based on navbar setup */
+    max-width: 1440px; /* Ensures it does not exceed standard maximum width */
+    margin: 0 auto; /* Centers the content horizontally */
+    display: flex; /* Enables flexible box layout */
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between; /* Spreads items evenly with space between */
+    position: relative; /* Needed for absolute positioning of nested elements */
 }
 
 /* Footer Logo Styling */
 .footer-logo {
-    height: 88px; /* Match navbar logo height */
-    width: auto; /* Maintain aspect ratio */
+    height: 88px; /* Height matches the navbar logo for consistency */
+    width: auto; /* Keeps the image aspect ratio intact */
 }
 
 /* Footer Text Styling */
 .footer p {
-    position: absolute; /* Absolute positioning */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset the element by its own dimensions */
-    margin: 0; /* Remove extra margin */
-    font-size: 0.9rem; /* Smaller text size */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consistent font */
-    line-height: 1.5; /* Improve readability */
-    color: #fff; /* White text */
-    text-align: center; /* Center text alignment */
-    font-weight: 600;
+    position: absolute; /* Allows precise positioning */
+    top: 50%; /* Vertically centers the text */
+    left: 50%; /* Horizontally centers the text */
+    transform: translate(-50%, -50%); /* Adjusts position relative to its own dimensions */
+    margin: 0; /* Removes any default margin */
+    font-size: 0.9rem; /* Smaller, more subtle text size */
+    font-family: var(--font-family-sans); /* Consistent font usage */
+    line-height: 1.5; /* Enhances text readability */
+    color: var(--button-text-color); /* Text color for readability */
+    text-align: center; /* Ensures text is centered */
+    font-weight: 600; /* Bold text for emphasis */
 }
 
 

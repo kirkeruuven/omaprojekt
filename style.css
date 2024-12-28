@@ -629,7 +629,7 @@ p {
     }
     
     .hero-content {
-        margin-top: calc(6rem + 5vh); /* Adjusts spacing based on viewport height */
+        margin-top: calc(6rem + 6vh); /* Adjusts spacing based on viewport height */
         padding: 1rem; /* Optional padding for spacing consistency */
     }
 

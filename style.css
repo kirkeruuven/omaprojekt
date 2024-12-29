@@ -713,13 +713,17 @@ button.btn-reserve:hover {
   }
 
   .reservation h2 {
-    font-size: 24px; /* Adjust heading size for mobile */
+    font-size: 32px; /* Adjust heading size for mobile */
     margin-bottom: 1rem; /* Adjust spacing below heading */
   }
 
   .reservation form {
     max-width: 100%; /* Ensure full width for mobile */
     padding: 1rem; /* Adjust padding */
+  }
+
+  .form-group label {
+    font-size: 14px; /* Clear, readable size for icons */
   }
 
   .form-group input {

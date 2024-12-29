@@ -167,7 +167,7 @@ p {
         padding: 10px 10px; /* Add padding for easier clicks */
         color: var(--primary-bg-color); /* White text */
         text-decoration: none;
-        font-size: 10px;
+        font-size: 14px;
     }
   
     .navbar-nav a:hover {
@@ -181,6 +181,10 @@ p {
 
     .hero-content h2{
         font-size: 16px;
+    }
+
+    ..hero-content .hero-logo{
+        max-width: 380px;
     }
   }
   
@@ -288,6 +292,29 @@ p {
     font-size: 16px; /* Standard paragraph font size */
     line-height: 1.8; /* Enhances readability */
     color: var(--secondary-text-color); /* Softer color for paragraphs */
+}
+
+/* Media Query for screens with a max width of 768px */
+@media (max-width: 768px) {
+    .about {
+        margin: 0; /* Remove vertical margin */
+        height: 90vh; /* Full viewport height */
+        display: flex; /* Enable Flexbox */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+    }
+
+    .about .wrapper {
+        padding: 0 1rem; /* Ensure horizontal padding remains */
+    }
+
+    .about p{
+        font-size: 14px;
+    }
+
+    .about h2{
+        font-size: 32px;
+    }
 }
 
 /* Menu Section */

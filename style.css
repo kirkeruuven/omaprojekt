@@ -728,8 +728,57 @@ button.btn-reserve:hover {
 
 /* Tablet Styles */
 @media (min-width: 768px) and (max-width: 1024px) {
-  
-  
+  .navbar a{
+    font-size: 14px;
+  }
+  .menu {
+    margin-top: 3rem; /* Adjust top margin for title */
+    padding: 1.5rem; /* Ensure proper padding */
+  }
+
+  .menu h2 {
+    font-size: 32px; /* Slightly smaller title size for tablets */
+    text-align: center; /* Keep title centered */
+    margin-bottom: 1.5rem; /* Adjust spacing below */
+  }
+
+  .menu .wrapper {
+    padding: 0 1.5rem; /* Ensure consistent padding */
+    max-width: 720px; /* Adjust max width for tablet screens */
+  }
+
+  .menu-container {
+    display: flex;
+    flex-direction: column; /* Keep items stacked vertically */
+    gap: 1.5rem; /* Slightly reduce gap between categories */
+    max-width: 100%; /* Ensure full width */
+    padding: 0 1.5rem; /* Add some horizontal padding */
+  }
+
+  .boulangerie li,
+  .beverages li {
+    display: flex;
+    justify-content: space-between; /* Keep name and price aligned */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 0.3rem; /* Reduce spacing between rows */
+    padding-bottom: 0.2rem; /* Tighten padding */
+    flex-wrap: nowrap; /* Prevent name and price wrapping */
+  }
+
+  .menu-item {
+    flex: 1; /* Allow item names to expand */
+    margin-right: 8px; /* Reduce spacing between name and price */
+    text-align: left; /* Keep name aligned left */
+  }
+
+  .menu-price {
+    flex-shrink: 0; /* Prevent price from shrinking */
+    font-size: 0.9rem; /* Slightly larger font size for tablets */
+    text-align: right; /* Align price to the right */
+    margin-left: 0.5rem; /* Slightly reduce margin */
+    white-space: nowrap; /* Prevent wrapping of the price */
+  }
+
   .contact h2 {
     font-size: 32px; /* Reduce heading size */
   }

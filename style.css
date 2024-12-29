@@ -318,6 +318,7 @@ p {
 
     .about .wrapper {
         padding: 0 1rem; /* Ensure horizontal padding remains */
+        max-width: 384px;
     }
 
     .about p{

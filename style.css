@@ -697,7 +697,44 @@ button.btn-reserve:hover {
     white-space: nowrap; /* Prevent wrapping */
   }
 
-  
+  .reservation {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 80vh; /* Full height for vertical centering */
+    margin: 0; /* Remove margin */
+    padding: 1.5rem; /* Add padding for spacing */
+  }
+
+  .reservation .wrapper {
+    padding: 0 1rem; /* Ensure consistent padding */
+    max-width: 384px; /* Adjust max width for mobile screens */
+  }
+
+  .reservation h2 {
+    font-size: 24px; /* Adjust heading size for mobile */
+    margin-bottom: 1rem; /* Adjust spacing below heading */
+  }
+
+  .reservation form {
+    max-width: 100%; /* Ensure full width for mobile */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .form-group input {
+    max-width: 100%; /* Full width for input fields */
+  }
+
+  .btn-book {
+    display: block; /* Ensures block layout */
+    width: auto; /* Allows for automatic sizing */
+    max-width: 177px; /* Restrict maximum width */
+    font-size: 14px; /* Slightly smaller font */
+    padding: 0.6rem 1.5rem; /* Adjust padding */
+    margin: 2rem auto 0; /* Center the button with auto margins */
+    text-align: center; /* Center-align the text */
+  }
 
   .footer .wrapper {
     display: flex; /* Enable flexbox */

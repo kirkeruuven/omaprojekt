@@ -129,15 +129,14 @@ p {
     }
   }
   
-  /* Mobile View (Below 768px) */
-  @media (max-width: 768px) {
+/* Mobile View (Below 768px) */
+@media (max-width: 768px) {
     .navbar {
         display: flex;
         flex-direction: column; /* Stack logo and nav */
         align-items: stretch; /* Make it stretch across the screen */
         width: 100%;
         background-color: var(--accent-color); /* Green background */
-    
     }
 
     .navbar .wrapper {
@@ -169,25 +168,27 @@ p {
         text-decoration: none;
         font-size: 14px;
     }
-  
+
     .navbar-nav a:hover {
-      color: #fff;
+        color: #fff;
     }
-    
+
     .hero-content {
-        margin-top: calc(6rem + 5vh); /* Adjusts spacing based on viewport height */
+        margin-top: calc(7rem + 5vh); /* Ensure hero starts below navbar */
+        width: 100%; /* Full width */
+        text-align: center; /* Center content */
         padding: 1rem; /* Optional padding for spacing consistency */
     }
 
-    .hero-content h2{
-        font-size: 16px;
+    .hero-content h2 {
+        font-size: 16px; /* Adjust font size for smaller screens */
     }
 
-    ..hero-content .hero-logo{
-        max-width: 380px;
+    .hero-content .hero-logo {
+        max-width: 380px; /* Scale logo appropriately for mobile */
+        width: 100%; /* Ensure it fits within the screen */
     }
-  }
-  
+}
 
 
 /* Hero Section */

@@ -8,9 +8,9 @@
   --button-text-color: #ffffff;
   --font-family-sans: "montserrat", Arial, sans-serif;
   --font-family-serif: "EB Garamond", serif;
-  --accent-color: #1d3e29; // Green accent color
-  --hover-color: #21462f; // Darker green for hover effects
-  --border-color: #d5d5d5; // Light gray for borders
+  --accent-color: #1d3e29; 
+  --hover-color: #21462f; 
+  --border-color: #d5d5d5; 
 }
 
 /* Global Styles */
@@ -29,20 +29,15 @@ body {
 }
 
 .wrapper {
-  width: calc(1440px - 120px); /* Adjusts width based on navbar setup */
-  max-width: 1440px; /* Ensures it does not exceed standard maximum width */
+  width: calc(1440px - 120px); /* Adjust wrapper width */
+  max-width: 1440px; /* Ensure it does not exceed maximum width */
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
 
 /* Typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-serif);
   font-weight: 600;
   color: var(--heading-color);
@@ -63,12 +58,12 @@ button.btn-reserve {
   padding: 0.8rem 1.8rem;
   font-size: 16px;
   font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
   text-align: center;
   line-height: 1.4;
   font-family: var(--font-family-sans);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
   margin-top: 4rem;
 }
 
@@ -79,98 +74,91 @@ button.btn-reserve:hover {
 
 /* Navbar */
 .navbar {
-  width: 100%; /* Full-width */
-  position: fixed; /* Sticks the navbar to the top */
+  width: 100%; 
+  position: fixed;
   top: 0;
-  background-color: var(--accent-color); /* Background color */
-  z-index: 1000; /* Ensure it's above other content */
+  background-color: var(--accent-color); 
+  z-index: 1000; 
   height: 100px;
-  border-bottom: 1px solid white; /* Subtle border */
+  border-bottom: 1px solid white; 
 }
 
-/* Wrapper for Navbar Content */
 .navbar .wrapper {
   display: flex;
-  justify-content: space-between; /* Space between logo and nav */
-  align-items: center; /* Align items vertically */
-  width: calc(100% - 120px); /* Matches wrapper's max width */
+  justify-content: space-between; 
+  align-items: center;
+  width: calc(100% - 120px); 
   max-width: 1440px;
   margin: 0 auto;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* Logo Styling */
 .navbar-logo img {
   height: 80px;
   width: auto;
   margin-top: 0.5rem;
 }
 
-/* Navigation List */
 .navbar-nav ul {
-  display: flex; /* Horizontal layout by default */
-  gap: 40px; /* Space between links */
-  list-style: none; /* Remove default bullets */
+  display: flex; 
+  gap: 40px; 
+  list-style: none; 
   margin: 0;
   padding: 0;
 }
 
-/* Navigation Links */
 .navbar-nav a {
-  text-decoration: none; /* Remove underline */
   font-family: var(--font-family-sans);
   font-size: 16px;
   font-weight: 500;
-  color: var(--primary-bg-color); /* White text */
+  text-decoration: none;
+  color: var(--primary-bg-color); 
 }
 
 .navbar-nav a:hover {
-  text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline; 
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  height: calc(100vh - 59px); /* Fullscreen hero */
+  height: calc(100vh - 59px); 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: hidden; /* Ensure content stays within bounds */
+  overflow: hidden; 
 }
 
-/* Video Background */
 .hero-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures video covers the entire section */
-  z-index: 0; /* Places video below overlay and content */
-  border-bottom: #1d3e29 1px solid;
+  object-fit: cover; 
+  z-index: 0;
+  border-bottom: 1px solid #1d3e29;
 }
 
-/* Overlay */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
-  z-index: 1; /* Places overlay above video */
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
 }
 
 /* Hero Content */
 .hero-content {
   position: relative;
-  z-index: 2; /* Places content above overlay and video */
+  z-index: 2; 
 }
 
 .hero-content h2 {
-  color: white;
+  color: var(--primary-bg-color); 
 }
 
 .hero-logo {
@@ -182,18 +170,19 @@ button.btn-reserve:hover {
   animation: fadeIn 1.8s ease-out forwards;
 }
 
+/* Mobile Hero Image */
 .hero-image {
-    display: none; /* Hide fallback image by default */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
+  display: none; /* Hide image by default */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
-/* Animation */
+/* Keyframe Animations */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -208,41 +197,37 @@ button.btn-reserve:hover {
 /* About Section */
 .about {
   background-color: var(--primary-bg-color);
-  margin: 100px 0; /* Vertical spacing */
-  text-align: center; /* Center content */
+  margin: 100px 0; 
+  text-align: center;
 }
 
 .about-image img {
   height: 541px; /* Specified height */
   width: 100%; /* Full width */
-  object-fit: cover; /* Cover ensures img fully fills the space */
-  border-bottom: #1d3e29 1px solid;
-  border-top: #1d3e29 1px solid;
+  object-fit: cover; 
+  border-bottom: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
 }
 
 .about .wrapper {
   max-width: 768px; /* Optimal reading width */
-  margin: 0 auto; /* Center wrapper */
-  padding: 0 1rem; /* Horizontal padding */
-}
-
-/* Typography within About Section */
-.about h2,
-.about p {
-  font-family: var(--font-family-serif);
-  color: var(--primary-text-color);
-  margin-bottom: 1.5rem; /* Consistent bottom margin */
+  margin: 0 auto; 
+  padding: 0 1rem; 
 }
 
 .about h2 {
-  font-size: 40px; /* Prominent heading size */
+  font-family: var(--font-family-serif);
+  font-size: 40px; 
+  color: var(--primary-text-color);
+  margin-bottom: 1.5rem;
 }
 
 .about p {
   font-family: var(--font-family-sans);
-  font-size: 16px; /* Standard paragraph font size */
-  line-height: 1.8; /* Enhances readability */
-  color: var(--secondary-text-color); /* Softer color for paragraphs */
+  font-size: 16px; 
+  line-height: 1.8; 
+  color: var(--secondary-text-color);
+  margin-bottom: 1.5rem;
 }
 
 /* Menu Section */
@@ -268,28 +253,27 @@ button.btn-reserve:hover {
   font-weight: 600;
 }
 
-/* Menu Content Layout */
 .menu-container {
-  display: grid; /* Use grid for precise positioning */
-  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
-  grid-template-rows: auto auto; /* Auto height for rows */
-  column-gap: 95px; /* Space between columns */
-  row-gap: 64px; /* Space between rows */
-  max-width: 1200px; /* Restrict width of the content */
-  margin: 0 auto; /* Center the container */
-  text-align: left; /* Align text in categories to the left */
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto; 
+  column-gap: 95px; 
+  row-gap: 64px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  text-align: left;
 }
 
 /* Boulangerie Section */
 .menu-category.boulangerie {
-  grid-column: 1; /* Place in the first column */
-  grid-row: 1; /* Place in the first row */
+  grid-column: 1; 
+  grid-row: 1; 
 }
 
 /* Beverages Section */
 .menu-category.beverages {
-  grid-column: 2; /* Place in the second column */
-  grid-row: 2; /* Place in the second row */
+  grid-column: 2; 
+  grid-row: 2;
 }
 
 .menu h3 {
@@ -299,54 +283,54 @@ button.btn-reserve:hover {
 
 .boulangerie,
 .beverages {
-  flex: 1; /* Equal width sections */
+  flex: 1; 
 }
 
 .boulangerie h3,
 .beverages h3 {
   font-family: var(--font-family-serif);
   font-size: 1.8rem;
-  color: #333; /* Darker color */
+  color: #333; 
   margin-bottom: 1rem;
 }
 
 .boulangerie ul,
 .beverages ul {
-  list-style: none; /* No bullets */
-  padding: 0; /* Remove default padding */
+  list-style: none; 
+  padding: 0; /
 }
 
 .boulangerie li,
 .beverages li {
-  display: flex; /* Arrange rows for item + price */
-  justify-content: space-between; /* Align name and price */
+  display: flex; 
+  justify-content: space-between; 
   font-family: var(--font-family-sans);
   font-size: 1rem;
   color: #555;
   margin-bottom: 1rem;
-  padding-bottom: 0.5rem; /* Space before separator */
+  padding-bottom: 0.5rem; 
 }
 
 .menu-item {
   display: flex;
-  flex-direction: column; /* Stack name and description */
-  gap: 0.2rem; /* Small space between lines */
+  flex-direction: column; 
+  gap: 0.2rem; 
 }
 
 .menu-item span {
-  font-weight: 550; /* Bold for the French name */
+  font-weight: 550; 
 }
 
 .menu-item small {
-  font-size: 0.9rem; /* Smaller font for English description */
-  color: var(--secondary-text-color); /* Lighter text color for contrast */
-  font-style: italic; /* Italicize for style */
-  line-height: 1.2; /* Reduce line height */
-  margin-top: -4px; /* Adjust spacing above for tighter appearance */
+  font-size: 0.9rem; 
+  color: var(--secondary-text-color); 
+  font-style: italic; 
+  line-height: 1.2; 
+  margin-top: -4px; 
 }
 
 .menu-price {
-  font-weight: 600; /* Emphasize price */
+  font-weight: 600; 
   font-size: 14px;
 }
 
@@ -355,14 +339,14 @@ button.btn-reserve:hover {
   background-color: var(--primary-bg-color);
   text-align: center;
   margin-top: 3rem;
-  padding: 1rem 0; /* Uniform padding for consistency */
+  padding: 1rem 0; 
 }
 
 .reservation h2 {
   font-family: var(--font-family-serif);
   font-size: 40px;
   color: var(--primary-text-color);
-  margin-bottom: 2rem; /* Space below heading */
+  margin-bottom: 2rem; 
 }
 
 .reservation p {
@@ -370,75 +354,73 @@ button.btn-reserve:hover {
   font-size: 18px;
   line-height: 1.8;
   color: var(--secondary-text-color);
-  margin-bottom: 3rem; /* Consistent spacing below paragraph */
+  margin-bottom: 3rem; 
 }
 
 .reservation form {
-  max-width: 768px; /* Restricting the form width for better focus and readability */
-  margin: 0 auto; /* Centers the form horizontally within its container */
-  display: flex; /* Using flexbox to organize children elements */
-  flex-direction: column; /* Stacking children elements vertically */
-  gap: 1.2rem; /* Space between each form group for visual separation */
-  margin-bottom: 3rem; /* Extra space below the form before next content */
-  padding: 2rem; /* Padding inside the form for spacing */
-  background-color: var(
-    --primary-bg-color
-  ); /* White background from the variable */
+  max-width: 768px; 
+  margin: 0 auto; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.2rem; 
+  padding: 2rem; 
+  background-color: var(--primary-bg-color); 
+  margin-bottom: 3rem; 
 }
 
-/* Form Groups */
+/* Form Group Styles */
 .form-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  align-items: center; 
+  gap: 0.5rem; 
   font-family: var(--font-family-sans);
   font-size: 16px;
   color: var(--secondary-text-color);
-  width: 100%; /* Full width to accommodate various form factors */
+  width: 100%; 
 }
 
 .form-group label i {
-  margin-right: 0.5rem;
-  color: var(--accent-color); /* Using variable for icon color */
-  font-size: 1.3rem; /* Clear, readable size for icons */
+  margin-right: 0.5rem; 
+  color: var(--accent-color); 
+  font-size: 1.3rem; 
 }
 
 .form-group input {
-  width: 100%;
-  max-width: 300px; /* Maximum width to control layout on larger screens */
-  padding: 12px;
-  border: 1px solid #f0f0f0; /* Light gray border for subtle delineation */
-  text-align: left; /* Ensure text alignment is consistent */
+  width: 100%; 
+  max-width: 300px; 
+  padding: 12px; 
+  border: 1px solid #f0f0f0; 
+  text-align: left; 
 }
 
 /* Booking Button Styles */
 .btn-book {
-  display: inline-block;
-  width: 100%; /* Matches the width of input fields for consistency */
-  max-width: 177px; /* Specific maximum width for design precision */
-  padding: 0.8rem 1.8rem; /* Uniform padding for better usability */
-  font-size: 16px; /* Consistent with other form elements */
-  color: var(--button-text-color); /* CSS variable for text color */
-  background-color: var(--button-bg-color); /* CSS variable for background */
-  border: none; /* Clear border for a cleaner look */
-  font-family: var(--font-family-sans); /* Consistent typography */
-  font-weight: 600; /* Ensures emphasis is visually discernible */
-  cursor: pointer; /* Indicates interactive element */
-  text-align: center; /* Ensures text is properly aligned */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effects */
-  margin: 4rem auto 0; /* Margins for vertical rhythm and centering */
+  display: block; 
+  max-width: 177px; /* Limit width */
+  width: 100%; 
+  padding: 0.8rem 1.8rem; 
+  font-size: 16px; 
+  font-family: var(--font-family-sans); 
+  font-weight: 600; 
+  color: var(--button-text-color); 
+  background-color: var(--button-bg-color); 
+  border: none; 
+  cursor: pointer; 
+  text-align: center; 
+  transition: background-color 0.3s ease; 
+  margin: 4rem auto 0; 
 }
 
 .btn-book:hover {
-  background-color: var(--button-hover-bg-color); /* Variable for hover state */
+  background-color: var(--button-hover-bg-color); 
 }
 
 /* Contact Section Styles */
 .contact {
-  background-color: var(--button-bg-color); 
-  color: var(--button-text-color); /* White text from variables */
-  border-bottom: 1px solid var(--button-text-color); /* Consistent color variable */
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color); 
+  border-bottom: 1px solid var(--button-text-color); 
 }
 
 .contact .wrapper {
@@ -449,6 +431,7 @@ button.btn-reserve:hover {
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
+  gap: 2rem; /
 }
 
 .contact h2 {
@@ -459,11 +442,12 @@ button.btn-reserve:hover {
   text-align: center;
   margin-top: 6.25rem;
   margin-bottom: 3rem;
+  line-height: 1.2; 
 }
 
 .contact p {
-  font-size: 18px; /* Standard font size for body text */
-  line-height: 1; /* Improved readability */
+  font-size: 18px; 
+  line-height: 1.6;
   color: var(--button-text-color);
 }
 
@@ -472,113 +456,102 @@ button.btn-reserve:hover {
   flex: 1;
   max-width: 45%;
   font-family: var(--font-family-sans);
-  font-size: 16px; /* Maintaining consistent font size across the section */
-  line-height: 1.8; /* Adjusted for better text readability */
-}
-
-.contact .contact-left,
-.contact .contact-right {
-  text-align: left; /* Uniform text alignment */
+  font-size: 16px; 
+  line-height: 1.8; 
+  text-align: left; 
 }
 
 .contact iframe {
-  margin-top: 100px; /* Space above the map for better layout */
-  width: 100%; /* Responsive width */
-  height: 530px; /* Specified height for the iframe */
-  border: none; /* No border for a cleaner appearance */
-  margin-bottom: 6.25rem; /* Space below the map before next content */
+  margin-top: 100px; 
+  width: 100%; 
+  height: 530px; 
+  border: none; 
+  margin-bottom: 6.25rem; 
 }
 
-/* Footer Styles */
+/* Footer */
 .footer {
-  background-color: var(
-    --button-bg-color
-  ); /* Utilizes variable for background color */
-  padding: 2rem 0; /* Consistent vertical padding */
-  position: relative; /* Establishes a stacking context */
+  background-color: var(--button-bg-color); 
+  padding: 2rem 0; 
+  position: relative; 
 }
 
 .footer .wrapper {
-  width: calc(1440px - 120px); /* Adjusts width based on navbar setup */
-  max-width: 1440px; /* Ensures it does not exceed standard maximum width */
-  margin: 0 auto; /* Centers the content horizontally */
-  display: flex; /* Enables flexible box layout */
-  align-items: center; /* Vertically centers items */
-  justify-content: space-between; /* Spreads items evenly with space between */
-  position: relative; /* Needed for absolute positioning of nested elements */
+  width: calc(1440px - 120px); 
+  max-width: 1440px; 
+  margin: 0 auto; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  position: relative; 
 }
 
-/* Footer Logo Styling */
 .footer-logo {
-  height: 80px; /* Height matches the navbar logo for consistency */
+  height: 80px; 
   width: auto; /* Keeps the image aspect ratio intact */
 }
 
-/* Footer Text Styling */
 .footer p {
-  position: absolute; /* Allows precise positioning */
-  top: 50%; /* Vertically centers the text */
-  left: 50%; /* Horizontally centers the text */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Adjusts position relative to its own dimensions */
-  margin: 0; /* Removes any default margin */
-  font-size: 0.9rem; /* Smaller, more subtle text size */
-  font-family: var(--font-family-sans); /* Consistent font usage */
-  line-height: 1.5; /* Enhances text readability */
-  color: var(--button-text-color); /* Text color for readability */
-  text-align: center; /* Ensures text is centered */
-  font-weight: 600; /* Bold text for emphasis */
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%,-50%); /* Adjusts position relative to its own dimensions */
+  margin: 0; 
+  font-size: 0.9rem; 
+  font-family: var(--font-family-sans); 
+  line-height: 1.5; 
+  color: var(--button-text-color); 
+  text-align: center; 
+  font-weight: 600; 
 }
 
 /* Phone Styles */
 @media (max-width: 768px) {
   .btn-reserve {
-    font-size: 14px; /* Slightly smaller font size */
-    padding: 10px 20px; /* Reduced padding */
+    font-size: 14px; 
+    padding: 10px 20px;
   }
 
   .navbar {
     display: flex;
-    flex-direction: column; /* Stack logo and nav */
-    align-items: stretch; /* Stretch across the screen */
+    flex-direction: column; 
+    align-items: stretch; 
     width: 100%;
-    background-color: var(--accent-color); /* Green background */
-    position: sticky; 
+    background-color: var(--accent-color); 
+    position: sticky;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensure navbar stays on top */
+    z-index: 1000; 
   }
 
   .navbar .wrapper {
-    flex-direction: column; /* Stack logo and nav */
-    align-items: center; /* Center-align content */
-    width: 100%; /* Full width for wrapper */
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
     border-bottom: 1px solid white;
   }
 
   .navbar-nav {
-    width: 100%; /* Green background spans full width */
+    width: 100%; 
   }
 
   .navbar-nav ul {
     display: flex;
-    flex-direction: column; /* Vertical menu */
-    align-items: stretch; /* Ensure items stretch full width */
-    width: 100%; /* Full width */
-    background-color: var(--accent-color); /* Green background */
-    padding: 1.5rem 0; /* Add spacing for visual clarity */
+    flex-direction: column; 
+    align-items: stretch; 
+    width: 100%; 
+    background-color: var(--accent-color); 
+    padding: 1.5rem 0; 
     margin: 0;
   }
 
   .navbar-nav a {
     display: block;
-    text-align: center; /* Center align text */
-    padding: 0; /* Add padding for easier clicks */
-    color: var(--primary-bg-color); /* White text */
+    text-align: center; 
+    padding: 0; 
+    color: var(--primary-bg-color);
     text-decoration: none;
-    font-size: 12px !important; /* Use !important if necessary */
+    font-size: 12px !important; 
   }
 
   .navbar-nav a:hover {
@@ -587,38 +560,38 @@ button.btn-reserve:hover {
 
   .hero-content {
     margin-top: calc(7rem); /* Push hero content below the fixed navbar */
-    width: 100%; /* Full width */
-    text-align: center; /* Center content */
-    padding: 1rem; /* Optional padding for spacing consistency */
+    width: 100%; 
+    text-align: center; 
+    padding: 1rem; 
   }
 
   .hero-content h2 {
-    font-size: 16px; /* Adjust font size for smaller screens */
+    font-size: 16px; 
   }
 
   .hero-content .hero-logo {
-    max-width: 380px; /* Scale logo appropriately for mobile */
-    width: 100%; /* Ensure it fits within the screen */
+    max-width: 380px; 
+    width: 100%; 
   }
 
   .hero-video {
-    display: none; /* Hide video on smaller screens */
-}
+    display: none; 
+  }
 
-.hero-image {
-    display: block; /* Show fallback image */
-}
+  .hero-image {
+    display: block; 
+  }
 
   .about {
-    margin: 0; /* Remove vertical margin */
+    margin: 0; 
     height: 80vh;
-    display: flex; /* Enable Flexbox */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
   }
 
   .about .wrapper {
-    padding: 0 1rem; /* Ensure horizontal padding remains */
+    padding: 0 1rem; 
     max-width: 384px;
   }
 
@@ -631,171 +604,170 @@ button.btn-reserve:hover {
     font-size: 32px;
   }
 
-   
-  .contact .wrapper {
-    flex-direction: column; /* Stack contact sections vertically */
-    text-align: center; /* Center-align text */
-  }
-
-  .contact h2 {
-    font-size: 32px; /* Reduce heading size */
-  }
-
-  .contact p {
-    font-size: 14px; /* Reduce text size for readability */
-  }
-
-  .contact iframe {
-    height: 400px; /* Reduce map height for tablet screens */
-  }
-
   .menu {
-    margin-top: 4rem; /* Add spacing for the title */
-    padding: 1rem; /* Adjust padding for better spacing */
+    margin-top: 4rem; 
+    padding: 1rem; 
   }
 
   .menu h2 {
-    font-size: 32px; /* Adjust title size */
-    text-align: center; /* Center the title */
-    margin-bottom: 1rem; /* Add spacing below */
+    font-size: 32px; 
+    text-align: center; 
+    margin-bottom: 1rem; 
   }
 
   .menu .wrapper {
-    padding: 0 1rem; /* Ensure horizontal padding remains */
+    padding: 0 1rem; 
     max-width: 384px;
   }
 
   .menu-container {
     display: flex;
-    flex-direction: column; /* Stack categories vertically */
-    gap: 1rem; /* Add spacing between sections */
-    max-width: 100%; /* Full width on mobile */
-    padding: 0 1rem; /* Prevent clipping */
+    flex-direction: column; 
+    gap: 1rem;
+    max-width: 100%; 
+    padding: 0 1rem; 
   }
 
   .boulangerie li,
   .beverages li {
     display: flex;
-    justify-content: space-between; /* Align name and price */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 0.5rem; /* Reduce spacing */
-    padding-bottom: 0.3rem; /* Tighten padding */
-    flex-wrap: nowrap; /* Prevent wrapping of price and name */
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 0.5rem; 
+    padding-bottom: 0.3rem; 
+    flex-wrap: nowrap; 
   }
 
   .menu-item {
-    flex: 1; /* Allow name to take available space */
-    margin-right: 10px; /* Add spacing between name and price */
-    text-align: left; /* Align name to the left */
+    flex: 1; 
+    margin-right: 10px; 
+    text-align: left; 
   }
 
   .menu-price {
-    flex-shrink: 0; /* Prevent shrinking */
-    font-size: 0.85rem; /* Slightly smaller font for mobile */
-    text-align: right; /* Align price to the right */
-    margin-left: 1rem; /* Add space between name and price */
-    white-space: nowrap; /* Prevent wrapping */
+    flex-shrink: 0;
+    font-size: 0.85rem; 
+    text-align: right; 
+    margin-left: 1rem; 
+    white-space: nowrap; 
+  }
+
+  .contact .wrapper {
+    flex-direction: column; 
+    text-align: center; 
+  }
+
+  .contact h2 {
+    font-size: 32px; 
+  }
+
+  .contact p {
+    font-size: 14px; 
+  }
+
+  .contact iframe {
+    height: 400px; 
   }
 
   .reservation {
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    height: 80vh; /* Full height for vertical centering */
-    margin: 0; /* Remove margin */
-    padding: 1.5rem; /* Add padding for spacing */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 80vh; 
+    margin: 0; 
+    padding: 1.5rem; 
   }
 
   .reservation .wrapper {
-    padding: 0 1rem; /* Ensure consistent padding */
-    max-width: 384px; /* Adjust max width for mobile screens */
+    padding: 0 1rem;
+    max-width: 384px; 
   }
 
   .reservation h2 {
-    font-size: 32px; /* Adjust heading size for mobile */
-    margin-bottom: 1rem; /* Adjust spacing below heading */
+    font-size: 32px; 
+    margin-bottom: 1rem;
   }
 
   .reservation form {
-    max-width: 100%; /* Ensure full width for mobile */
-    padding: 1rem; /* Adjust padding */
+    max-width: 100%; 
+    padding: 1rem; 
   }
 
   .form-group label {
-    font-size: 14px; /* Clear, readable size for icons */
+    font-size: 14px;
   }
 
   .form-group input {
-    max-width: 100%; /* Full width for input fields */
+    max-width: 100%; 
   }
 
   .btn-book {
-    display: block; /* Ensures block layout */
-    width: auto; /* Allows for automatic sizing */
+    display: block; 
+    width: auto; 
     max-width: 177px; /* Restrict maximum width */
-    font-size: 14px; /* Slightly smaller font */
-    padding: 0.6rem 1.5rem; /* Adjust padding */
-    margin: 2rem auto 0; /* Center the button with auto margins */
-    text-align: center; /* Center-align the text */
+    font-size: 14px; 
+    padding: 0.6rem 1.5rem; 
+    margin: 2rem auto 0; 
+    text-align: center; 
   }
 
   .footer .wrapper {
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center-align content horizontally */
-    justify-content: center; /* Center-align content vertically */
-    max-width: 100%; /* Ensure it spans the entire screen on mobile */
-    width: 100%; /* Full width */
-    margin: 0 auto; /* Center the wrapper horizontally */
-    padding: 1rem; /* Add padding for consistent spacing */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; /
+    max-width: 100%; 
+    width: 100%;
+    margin: 0 auto; 
+    padding: 1rem; 
   }
 
   .footer-logo {
-    margin: 0 auto; /* Center the logo */
-    display: block; /* Ensure it's a block-level element */
-    height: 80px; /* Adjust size for mobile */
-    width: auto; /* Maintain aspect ratio */
-    margin-bottom: 7rem; /* Add spacing below the logo */
+    margin: 0 auto; 
+    display: block; 
+    height: 80px; 
+    width: auto; 
+    margin-bottom: 7rem; 
   }
 
   .footer p {
-    font-size: 0.7rem; /* Smaller font size for better readability on mobile */
-    line-height: 1.4; /* Improve readability */
-    text-align: center; /* Center the text */
-    margin: 0; /* Remove default margin */
-    margin-top: 0.5rem; /* Add spacing above the text */
+    font-size: 0.7rem; 
+    line-height: 1.4; 
+    text-align: center; 
+    margin: 0; 
+    margin-top: 0.5rem; 
     width: 90%; /* Restrict width for better readability */
   }
 }
 
 /* Tablet Styles */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .navbar a{
+  .navbar a {
     font-size: 14px;
   }
   .menu {
-    margin-top: 3rem; /* Adjust top margin for title */
-    padding: 1.5rem; /* Ensure proper padding */
+    margin-top: 3rem; 
+    padding: 1.5rem; 
   }
 
   .menu h2 {
-    font-size: 32px; /* Slightly smaller title size for tablets */
-    text-align: center; /* Keep title centered */
-    margin-bottom: 1.5rem; /* Adjust spacing below */
+    font-size: 32px; 
+    text-align: center; 
+    margin-bottom: 1.5rem; 
   }
 
   .menu .wrapper {
-    padding: 0 1.5rem; /* Ensure consistent padding */
-    max-width: 720px; /* Adjust max width for tablet screens */
+    padding: 0 1.5rem;
+    max-width: 720px; 
   }
 
   .menu-container {
     display: flex;
     flex-direction: column; /* Keep items stacked vertically */
-    gap: 1.5rem; /* Slightly reduce gap between categories */
-    max-width: 100%; /* Ensure full width */
-    padding: 0 1.5rem; /* Add some horizontal padding */
+    gap: 1.5rem; 
+    max-width: 100%;
+    padding: 0 1.5rem; 
   }
 
   .boulangerie li,
@@ -803,94 +775,93 @@ button.btn-reserve:hover {
     display: flex;
     justify-content: space-between; /* Keep name and price aligned */
     align-items: center; /* Align items vertically */
-    margin-bottom: 0.3rem; /* Reduce spacing between rows */
-    padding-bottom: 0.2rem; /* Tighten padding */
+    margin-bottom: 0.3rem; 
+    padding-bottom: 0.2rem;
     flex-wrap: nowrap; /* Prevent name and price wrapping */
   }
 
   .menu-item {
-    flex: 1; /* Allow item names to expand */
-    margin-right: 8px; /* Reduce spacing between name and price */
+    flex: 1; 
+    margin-right: 8px; 
     text-align: left; /* Keep name aligned left */
   }
 
   .menu-price {
     flex-shrink: 0; /* Prevent price from shrinking */
-    font-size: 0.9rem; /* Slightly larger font size for tablets */
+    font-size: 0.9rem; 
     text-align: right; /* Align price to the right */
     margin-left: 0.5rem; /* Slightly reduce margin */
-    white-space: nowrap; /* Prevent wrapping of the price */
+    white-space: nowrap; 
   }
 
   .reservation {
-    display: flex; /* Enable flexbox */
+    display: flex; 
     flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    height: 90vh; /* Full height for vertical centering */
-    margin: 0; /* Remove margin */
-    padding: 2rem; /* Add more padding for tablets */
+    align-items: center; 
+    height: 90vh; 
+    margin: 0; 
+    padding: 2rem;
   }
 
   .reservation .wrapper {
-    padding: 0 1.5rem; /* Ensure consistent padding */
-    max-width: 720px; /* Adjust max width for tablet screens */
+    padding: 0 1.5rem; 
+    max-width: 720px; 
   }
 
   .reservation h2 {
-    font-size: 32px; /* Slightly larger heading for tablets */
-    margin-bottom: 1.5rem; /* Adjust spacing below heading */
+    font-size: 32px; 
+    margin-bottom: 1.5rem; 
   }
 
   .reservation form {
-    max-width: 600px; /* Restrict form width for tablets */
-    padding: 1.5rem; /* Adjust padding */
+    max-width: 600px; 
+    padding: 1.5rem; 
   }
 
   .form-group input {
-    max-width: 90%; /* Slightly narrower for tablets */
+    max-width: 90%; 
   }
 
   .btn-book {
-    max-width: 200px; /* Adjust button width */
+    max-width: 200px; 
   }
 
   .contact h2 {
-    font-size: 32px; /* Reduce heading size */
+    font-size: 32px;
   }
 
   .contact p {
-    font-size: 16px; /* Reduce text size for readability */
+    font-size: 16px; 
   }
 
   .contact iframe {
-    height: 400px; /* Reduce map height for tablet screens */
+    height: 400px; 
   }
 
   .footer .wrapper {
-    display: flex; /* Use flexbox */
+    display: flex; 
     flex-direction: row; /* Align items in a row */
-    justify-content: space-between; /* Space between logo and text */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between; 
+    align-items: center;
     max-width: 1440px; /* Match the navbar max width */
     width: calc(100% - 120px); /* Align with navbar padding */
-    margin: 0 auto; /* Center the wrapper horizontally */
-    padding: 0; /* No extra padding */
+    margin: 0 auto; 
+    padding: 0; 
   }
 
   .footer-logo {
     display: block; /* Ensure it behaves as a block element */
     height: 80px; /* Same height as navbar logo */
-    width: auto; /* Maintain aspect ratio */
-    margin: 0; /* Remove extra spacing */
+    width: auto; 
+    margin: 0; 
   }
 
   .footer p {
-    font-size: 0.8rem; /* Adjust font size for tablet */
-    line-height: 1.3; /* Improve readability */
-    text-align: center; /* Align text to the left */
-    margin: 0; /* Remove default margin */
-    width: auto; /* Let the text flow naturally */
+    font-size: 0.8rem; 
+    line-height: 1.3; 
+    text-align: center; 
+    margin: 0; 
+    width: auto; 
   }
 }
-

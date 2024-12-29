@@ -122,21 +122,31 @@ p {
     text-decoration: underline; /* Add underline on hover */
   }
   
-  /* Tablet View (768px - 1024px) */
+/* Tablet View (768px - 1024px) */
   @media (max-width: 1024px) {
     .navbar-nav ul {
       gap: 20px; /* Reduce spacing between links */
     }
   }
   
+
 /* Mobile View (Below 768px) */
 @media (max-width: 768px) {
+    .btn-reserve {
+        font-size: 14px; /* Slightly smaller font size */
+        padding: 10px 20px; /* Reduced padding */
+    }
+    
     .navbar {
         display: flex;
         flex-direction: column; /* Stack logo and nav */
-        align-items: stretch; /* Make it stretch across the screen */
+        align-items: stretch; /* Stretch across the screen */
         width: 100%;
         background-color: var(--accent-color); /* Green background */
+        position: fixed; /* Fix navbar at the top */
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Ensure navbar stays on top */
     }
 
     .navbar .wrapper {
@@ -163,10 +173,10 @@ p {
     .navbar-nav a {
         display: block;
         text-align: center; /* Center align text */
-        padding: 10px 10px; /* Add padding for easier clicks */
+        padding: 8px 8px; /* Add padding for easier clicks */
         color: var(--primary-bg-color); /* White text */
         text-decoration: none;
-        font-size: 14px;
+        font-size: 12px !important; /* Use !important if necessary */
     }
 
     .navbar-nav a:hover {
@@ -174,7 +184,7 @@ p {
     }
 
     .hero-content {
-        margin-top: calc(7rem + 5vh); /* Ensure hero starts below navbar */
+        margin-top: calc(7rem); /* Push hero content below the fixed navbar */
         width: 100%; /* Full width */
         text-align: center; /* Center content */
         padding: 1rem; /* Optional padding for spacing consistency */
@@ -189,6 +199,7 @@ p {
         width: 100%; /* Ensure it fits within the screen */
     }
 }
+
 
 
 /* Hero Section */
@@ -299,7 +310,7 @@ p {
 @media (max-width: 768px) {
     .about {
         margin: 0; /* Remove vertical margin */
-        height: 90vh; /* Full viewport height */
+        height: 80vh; 
         display: flex; /* Enable Flexbox */
         justify-content: center; /* Center content vertically */
         align-items: center; /* Center content horizontally */
@@ -311,6 +322,7 @@ p {
 
     .about p{
         font-size: 14px;
+        margin-bottom: 0;
     }
 
     .about h2{

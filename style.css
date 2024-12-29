@@ -630,6 +630,8 @@ button.btn-reserve:hover {
   .about h2 {
     font-size: 32px;
   }
+
+   
   .contact .wrapper {
     flex-direction: column; /* Stack contact sections vertically */
     text-align: center; /* Center-align text */
@@ -645,6 +647,54 @@ button.btn-reserve:hover {
 
   .contact iframe {
     height: 400px; /* Reduce map height for tablet screens */
+  }
+
+  .menu {
+    margin-top: 4rem; /* Add spacing for the title */
+    padding: 1rem; /* Adjust padding for better spacing */
+  }
+
+  .menu h2 {
+    font-size: 32px; /* Adjust title size */
+    text-align: center; /* Center the title */
+    margin-bottom: 1rem; /* Add spacing below */
+  }
+
+  .menu .wrapper {
+    padding: 0 1rem; /* Ensure horizontal padding remains */
+    max-width: 384px;
+  }
+
+  .menu-container {
+    display: flex;
+    flex-direction: column; /* Stack categories vertically */
+    gap: 1rem; /* Add spacing between sections */
+    max-width: 100%; /* Full width on mobile */
+    padding: 0 1rem; /* Prevent clipping */
+  }
+
+  .boulangerie li,
+  .beverages li {
+    display: flex;
+    justify-content: space-between; /* Align name and price */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 0.5rem; /* Reduce spacing */
+    padding-bottom: 0.3rem; /* Tighten padding */
+    flex-wrap: nowrap; /* Prevent wrapping of price and name */
+  }
+
+  .menu-item {
+    flex: 1; /* Allow name to take available space */
+    margin-right: 10px; /* Add spacing between name and price */
+    text-align: left; /* Align name to the left */
+  }
+
+  .menu-price {
+    flex-shrink: 0; /* Prevent shrinking */
+    font-size: 0.85rem; /* Slightly smaller font for mobile */
+    text-align: right; /* Align price to the right */
+    margin-left: 1rem; /* Add space between name and price */
+    white-space: nowrap; /* Prevent wrapping */
   }
 
   .footer .wrapper {
@@ -678,6 +728,8 @@ button.btn-reserve:hover {
 
 /* Tablet Styles */
 @media (min-width: 768px) and (max-width: 1024px) {
+  
+  
   .contact h2 {
     font-size: 32px; /* Reduce heading size */
   }

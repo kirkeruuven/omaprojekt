@@ -143,7 +143,7 @@ p {
         align-items: stretch; /* Stretch across the screen */
         width: 100%;
         background-color: var(--accent-color); /* Green background */
-        position: fixed; /* Fix navbar at the top */
+        position:sticky; /* Fix navbar at the top */
         top: 0;
         left: 0;
         z-index: 1000; /* Ensure navbar stays on top */
@@ -166,14 +166,14 @@ p {
         align-items: stretch; /* Ensure items stretch full width */
         width: 100%; /* Full width */
         background-color: var(--accent-color); /* Green background */
-        padding: 10px 0; /* Add spacing for visual clarity */
+        padding: 0; /* Add spacing for visual clarity */
         margin: 0;
     }
 
     .navbar-nav a {
         display: block;
         text-align: center; /* Center align text */
-        padding: 8px 8px; /* Add padding for easier clicks */
+        padding: 0; /* Add padding for easier clicks */
         color: var(--primary-bg-color); /* White text */
         text-decoration: none;
         font-size: 12px !important; /* Use !important if necessary */

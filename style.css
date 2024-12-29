@@ -182,6 +182,17 @@ button.btn-reserve:hover {
   animation: fadeIn 1.8s ease-out forwards;
 }
 
+.hero-image {
+    display: none; /* Hide fallback image by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
 /* Animation */
 @keyframes fadeIn {
   0% {
@@ -472,7 +483,6 @@ button.btn-reserve:hover {
 
 .contact iframe {
   margin-top: 100px; /* Space above the map for better layout */
-  border-radius: 8px; /* Smoothed corners for aesthetics */
   width: 100%; /* Responsive width */
   height: 530px; /* Specified height for the iframe */
   border: none; /* No border for a cleaner appearance */
@@ -590,6 +600,15 @@ button.btn-reserve:hover {
     max-width: 380px; /* Scale logo appropriately for mobile */
     width: 100%; /* Ensure it fits within the screen */
   }
+
+  .hero-video {
+    display: none; /* Hide video on smaller screens */
+}
+
+.hero-image {
+    display: block; /* Show fallback image */
+}
+
   .about {
     margin: 0; /* Remove vertical margin */
     height: 80vh;
@@ -627,12 +646,38 @@ button.btn-reserve:hover {
   .contact iframe {
     height: 400px; /* Reduce map height for tablet screens */
   }
-  
+
+  .footer .wrapper {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align content horizontally */
+    justify-content: center; /* Center-align content vertically */
+    max-width: 100%; /* Ensure it spans the entire screen on mobile */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the wrapper horizontally */
+    padding: 1rem; /* Add padding for consistent spacing */
+  }
+
+  .footer-logo {
+    margin: 0 auto; /* Center the logo */
+    display: block; /* Ensure it's a block-level element */
+    height: 80px; /* Adjust size for mobile */
+    width: auto; /* Maintain aspect ratio */
+    margin-bottom: 7rem; /* Add spacing below the logo */
+  }
+
+  .footer p {
+    font-size: 0.7rem; /* Smaller font size for better readability on mobile */
+    line-height: 1.4; /* Improve readability */
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove default margin */
+    margin-top: 0.5rem; /* Add spacing above the text */
+    width: 90%; /* Restrict width for better readability */
+  }
 }
 
 /* Tablet Styles */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* Contact Section Adjustments */
   .contact h2 {
     font-size: 32px; /* Reduce heading size */
   }
@@ -643,6 +688,32 @@ button.btn-reserve:hover {
 
   .contact iframe {
     height: 400px; /* Reduce map height for tablet screens */
+  }
+
+  .footer .wrapper {
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between; /* Space between logo and text */
+    align-items: center; /* Center items vertically */
+    max-width: 1440px; /* Match the navbar max width */
+    width: calc(100% - 120px); /* Align with navbar padding */
+    margin: 0 auto; /* Center the wrapper horizontally */
+    padding: 0; /* No extra padding */
+  }
+
+  .footer-logo {
+    display: block; /* Ensure it behaves as a block element */
+    height: 80px; /* Same height as navbar logo */
+    width: auto; /* Maintain aspect ratio */
+    margin: 0; /* Remove extra spacing */
+  }
+
+  .footer p {
+    font-size: 0.8rem; /* Adjust font size for tablet */
+    line-height: 1.3; /* Improve readability */
+    text-align: center; /* Align text to the left */
+    margin: 0; /* Remove default margin */
+    width: auto; /* Let the text flow naturally */
   }
 }
 

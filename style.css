@@ -697,6 +697,8 @@ button.btn-reserve:hover {
     white-space: nowrap; /* Prevent wrapping */
   }
 
+  
+
   .footer .wrapper {
     display: flex; /* Enable flexbox */
     flex-direction: column; /* Stack content vertically */
@@ -777,6 +779,39 @@ button.btn-reserve:hover {
     text-align: right; /* Align price to the right */
     margin-left: 0.5rem; /* Slightly reduce margin */
     white-space: nowrap; /* Prevent wrapping of the price */
+  }
+
+  .reservation {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 90vh; /* Full height for vertical centering */
+    margin: 0; /* Remove margin */
+    padding: 2rem; /* Add more padding for tablets */
+  }
+
+  .reservation .wrapper {
+    padding: 0 1.5rem; /* Ensure consistent padding */
+    max-width: 720px; /* Adjust max width for tablet screens */
+  }
+
+  .reservation h2 {
+    font-size: 32px; /* Slightly larger heading for tablets */
+    margin-bottom: 1.5rem; /* Adjust spacing below heading */
+  }
+
+  .reservation form {
+    max-width: 600px; /* Restrict form width for tablets */
+    padding: 1.5rem; /* Adjust padding */
+  }
+
+  .form-group input {
+    max-width: 90%; /* Slightly narrower for tablets */
+  }
+
+  .btn-book {
+    max-width: 200px; /* Adjust button width */
   }
 
   .contact h2 {

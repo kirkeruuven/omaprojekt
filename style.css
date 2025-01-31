@@ -110,7 +110,7 @@ button.btn-reserve:hover {
 .navbar-nav a {
   font-family: var(--font-family-sans);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 00;
   text-decoration: none;
   color: var(--primary-bg-color); 
 }
@@ -431,7 +431,7 @@ button.btn-reserve:hover {
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 2rem; /
+  gap: 2rem; 
 }
 
 .contact h2 {
